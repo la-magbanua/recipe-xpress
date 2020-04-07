@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useRecipes } from '../../contexts/recipes-context.component'
-import RecipeList from '../recipe-list/recipe-list.component'
+
+import { Input, StyledSearchBar } from './search-bar.styles'
+import IngredientList from '../ingredient-list/ingredient-list.component'
 
 const SearchBar = () => {
   const {
@@ -34,20 +36,21 @@ const SearchBar = () => {
   }
 
   return (
-    <div>
+    <StyledSearchBar>
       <form onSubmit={handleSubmit}>
-        <input
+        <Input
           name="food"
           type="text"
           value={inputVal}
-          placeholder="input food here"
+          placeholder="Enter ingredients here"
           onChange={(e) => setInputVal(e.target.value)}
         />
       </form>
+      {ingredients.length ? <IngredientList /> : null}
       {ingredients.length >= 2 && !error && (
         <button onClick={fetchRecipes}>Get Recipes</button>
       )}
-    </div>
+    </StyledSearchBar>
   )
 }
 

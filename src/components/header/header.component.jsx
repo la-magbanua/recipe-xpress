@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { Wrap } from '../../styles/wrap.styles'
-import { StyledHeader, InnerHeader } from './header.styles'
+import { StyledHeader, InnerHeader, BrandText } from './header.styles'
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
       <Wrap>
         <InnerHeader>
           <Link to="/">
-            <h3>Recipe Express</h3>
+            <BrandText>Recipe Express</BrandText>
           </Link>
         </InnerHeader>
       </Wrap>

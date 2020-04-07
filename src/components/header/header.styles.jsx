@@ -8,3 +8,7 @@ export const InnerHeader = styled.div`
   align-items: center;
   justify-content: center;
 `
+export const BrandText = styled.h3`
+  font-weight: ${({ theme }) => theme.fontWeights.xBold};
+  opacity: ${({ theme }) => theme.opacity.main};
+`

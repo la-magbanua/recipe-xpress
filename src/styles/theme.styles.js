@@ -2,6 +2,7 @@ export const theme = {
   colors: {
     textColor: '#000',
     bgColor: '#fff',
+    grey: '#8b918e',
   },
   fontWeights: {
     normal: 400,
