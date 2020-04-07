@@ -1,17 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
-import { RecipeContextProvider } from './contexts/recipe-context'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { RecipeContextProvider } from './contexts/recipes-context.component'
 import { ThemeProvider } from 'styled-components'
+import App from './App.component'
 import * as serviceWorker from './serviceWorker'
 
-import { theme } from './styles/theme'
+import { theme } from './styles/theme.styles'
 
 ReactDOM.render(
   <React.StrictMode>
     <RecipeContextProvider>
       <ThemeProvider theme={theme}>
-        <App />
+        <Router>
+          <App />
+        </Router>
       </ThemeProvider>
     </RecipeContextProvider>
   </React.StrictMode>,

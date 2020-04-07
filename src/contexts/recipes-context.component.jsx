@@ -4,10 +4,20 @@ const RecipeContext = createContext()
 
 const RecipeContextProvider = ({ children }) => {
   const [recipes, setRecipes] = useState([])
-  const [error, setError] = useState('')
+  const [ingredients, setIngredients] = useState([])
+  const [error, setError] = useState(null)
 
   return (
-    <RecipeContext.Provider value={{ recipes, setRecipes, error, setError }}>
+    <RecipeContext.Provider
+      value={{
+        recipes,
+        setRecipes,
+        ingredients,
+        setIngredients,
+        error,
+        setError,
+      }}
+    >
       {children}
     </RecipeContext.Provider>
   )
