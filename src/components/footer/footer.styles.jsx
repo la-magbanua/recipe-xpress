@@ -9,6 +9,6 @@ export const InnerFooter = styled.div`
 
   p {
     font-size: 11px;
-    opacity: ${({ theme }) => theme.opacity.main};
+    color: ${({ theme }) => theme.colors.textSub};
   }
 `

@@ -10,5 +10,5 @@ export const InnerHeader = styled.div`
 `
 export const BrandText = styled.h3`
   font-weight: ${({ theme }) => theme.fontWeights.xBold};
-  opacity: ${({ theme }) => theme.opacity.main};
+  color: ${({ theme }) => theme.colors.textMain};
 `

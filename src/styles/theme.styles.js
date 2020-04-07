@@ -1,6 +1,8 @@
 export const theme = {
   colors: {
-    textColor: '#000',
+    textMain: '#2E2E2E',
+    textSub: '#5C5C5C',
+    textXSub: '#727272',
     bgColor: '#fff',
     grey: '#8b918e',
   },
@@ -9,10 +11,6 @@ export const theme = {
     bold: 700,
     xBold: 800,
   },
-  fontFace: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
-  opacity: {
-    main: '85%',
-    sub: '60%',
-    xsub: '50%',
-  },
+  fontFace: `Poppins, sans-serif`,
+  borderRadius: '9px',
 }
