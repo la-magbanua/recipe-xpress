@@ -3,13 +3,13 @@ import styled from 'styled-components'
 export const StyledRecipeItem = styled.div`
   display: flex;
   cursor: pointer;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 `
 
 export const ItemImage = styled.div`
   width: 85px;
   height: 70px;
-  margin-right: 8px;
+  margin-right: 16px;
   ${({ image }) => (image ? `background: url(${image})` : '')};
   background-size: cover;
   background-position: center center;
