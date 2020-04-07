@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRecipes } from '../../contexts/recipes-context.component'
+import { useRecipes } from '../../contexts/recipes/recipes-context.component'
 
 import IngredientItem from '../ingredient-item/ingredient-item.component'
 

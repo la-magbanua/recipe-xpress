@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { RecipeContextProvider } from './contexts/recipes-context.component'
+import { RecipeContextProvider } from './contexts/recipes/recipes-context.component'
 import { ThemeProvider } from 'styled-components'
 import App from './App.component'
 import * as serviceWorker from './serviceWorker'

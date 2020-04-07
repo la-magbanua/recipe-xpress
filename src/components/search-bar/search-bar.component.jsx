@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useRecipes } from '../../contexts/recipes-context.component'
+import { useRecipes } from '../../contexts/recipes/recipes-context.component'
 
 import IngredientList from '../ingredient-list/ingredient-list.component'
 import Button from '../button/button.component'
@@ -10,20 +10,25 @@ const SearchBar = () => {
   const {
     recipes,
     ingredients,
-    setIngredients,
+    addIngredient,
+    clearIngredients,
     setRecipes,
+    clearRecipes,
     error,
     setError,
+    setLoading,
+    clearLoading,
   } = useRecipes()
   const [inputVal, setInputVal] = useState('')
 
   async function fetchRecipes() {
     if (ingredients.length) {
-      console.log('fetching recipes!')
+      setLoading(true)
       const response = await fetch(
         `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&ranking=1&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY}`
       )
       const data = await response.json()
+      setLoading(false)
       if (!data.length) {
         setError('No recipes found. Try again.')
       }
@@ -31,15 +36,15 @@ const SearchBar = () => {
     }
   }
 
-  function clearRecipes() {
-    setIngredients([])
-    setRecipes([])
+  function handleClearRecipes() {
+    clearIngredients()
+    clearRecipes()
   }
 
   function handleSubmit(e) {
     e.preventDefault()
     if (inputVal) {
-      setIngredients([...ingredients, inputVal])
+      addIngredient(inputVal)
       setInputVal('')
     }
   }
@@ -58,7 +63,10 @@ const SearchBar = () => {
       </StyledForm>
       {ingredients.length ? <IngredientList /> : null}
       {ingredients.length >= 2 && !error && (
-        <Button onClick={!recipes.length ? fetchRecipes : clearRecipes} block>
+        <Button
+          onClick={!recipes.length ? fetchRecipes : handleClearRecipes}
+          block
+        >
           {!recipes.length ? 'Get Recipes' : 'Clear Recipes'}
         </Button>
       )}
