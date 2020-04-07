@@ -7,8 +7,8 @@ export const StyledRecipeItem = styled.div`
 `
 
 export const ItemImage = styled.div`
-  width: 62px;
-  height: 62px;
+  width: 85px;
+  height: 70px;
   margin-right: 8px;
   ${({ image }) => (image ? `background: url(${image})` : '')};
   background-size: cover;
