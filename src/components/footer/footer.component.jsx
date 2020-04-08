@@ -7,7 +7,7 @@ const Footer = () => {
     <StyledFooter>
       <Wrap>
         <InnerFooter>
-          <p>Designed & Build by L.A. Magbanua</p>
+          <p>Designed & Built by L.A. Magbanua</p>
         </InnerFooter>
       </Wrap>
     </StyledFooter>

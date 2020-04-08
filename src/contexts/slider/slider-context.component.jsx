@@ -4,8 +4,11 @@ const SliderContext = createContext()
 
 const SliderContextProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [currentItem, setCurrentItem] = useState(null)
   return (
-    <SliderContext.Provider value={{ isOpen, setIsOpen }}>
+    <SliderContext.Provider
+      value={{ isOpen, setIsOpen, currentItem, setCurrentItem }}
+    >
       {children}
     </SliderContext.Provider>
   )

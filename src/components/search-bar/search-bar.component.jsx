@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRecipes } from '../../contexts/recipes/recipes-context.component'
 
 import IngredientList from '../ingredient-list/ingredient-list.component'
@@ -6,6 +6,8 @@ import Button from '../button/button.component'
 
 import { StyledInput, StyledSearchBar, StyledForm } from './search-bar.styles'
 import SuggestionsList from '../suggestions-list/suggestions-list.component'
+
+import topIngredients from '../../topIngredients.json'
 
 const SearchBar = () => {
   const {
@@ -22,6 +24,7 @@ const SearchBar = () => {
     setSuggestions,
   } = useRecipes()
   const [inputVal, setInputVal] = useState('')
+  const [suggestionListIsVisible, setSuggestionListIsVisible] = useState(false)
 
   async function fetchRecipes() {
     if (ingredients.length) {
@@ -45,12 +48,22 @@ const SearchBar = () => {
 
   async function handleInputChange(e) {
     setInputVal(e.target.value)
-    const res = await fetch(
-      `https://api.spoonacular.com/food/ingredients/autocomplete?query=${inputVal}&number=5&metaInformation=true&apiKey=${process.env.REACT_APP_API_KEY}`
-    )
-    const data = await res.json()
-    setSuggestions(data)
   }
+
+  function getSuggestions() {
+    const newIngredients = topIngredients
+      .filter((ingredient) => ingredient.name.includes(inputVal))
+      .slice(0, 8)
+    setSuggestions(newIngredients)
+  }
+
+  useEffect(() => {
+    if (inputVal !== '') {
+      getSuggestions()
+    } else {
+      setSuggestions([])
+    }
+  }, [inputVal])
 
   return (
     <StyledSearchBar>
@@ -61,10 +74,14 @@ const SearchBar = () => {
           value={inputVal}
           placeholder="Enter ingredients here"
           onChange={handleInputChange}
+          onFocus={() => setSuggestionListIsVisible(true)}
           autoFocus
         />
-        {suggestions.length ? (
-          <SuggestionsList setInputVal={setInputVal} />
+        {suggestions.length && suggestionListIsVisible ? (
+          <SuggestionsList
+            setInputVal={setInputVal}
+            setSuggestionListIsVisible={setSuggestionListIsVisible}
+          />
         ) : null}
       </StyledForm>
 
