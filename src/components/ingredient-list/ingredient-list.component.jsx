@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRecipes } from '../../contexts/recipes/recipes-context.component'
 
 import IngredientItem from '../ingredient-item/ingredient-item.component'

@@ -3,20 +3,22 @@ import styled from 'styled-components'
 export const StyledSearchBar = styled.div`
   max-width: 400px;
   margin: 0 auto;
+  position: relative;
 `
 
 export const StyledForm = styled.form`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 `
 
 export const StyledInput = styled.input`
   width: 100%;
   outline: none;
   border: none;
-  border: 1px solid ${({ theme }) => theme.colors.textXSub};
-  border-radius: ${({ theme }) => theme.borderRadius};
-  padding: 12px 8px;
-  font-size: 13px;
+  padding: 12px 15px;
+  height: 45px;
+  font-size: 15px;
   color: ${({ theme }) => theme.colors.textSub};
+  border: 1px solid #bdbdbd;
+  border-radius: ${({ theme }) => theme.borderRadius};
 `

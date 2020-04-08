@@ -7,11 +7,7 @@ import SkeletonList from '../skeleton-list/skeleton-list.component'
 import { StyledRecipeList } from './recipe-list.styles'
 
 const RecipeList = () => {
-  const { recipes, loading, error } = useRecipes()
-
-  if (error) {
-    return <p>{error}</p>
-  }
+  const { recipes, loading } = useRecipes()
 
   return loading ? (
     <SkeletonList />

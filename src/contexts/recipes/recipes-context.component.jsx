@@ -6,6 +6,7 @@ const RecipeContext = createContext()
 const INITIAL_STATE = {
   recipes: [],
   ingredients: [],
+  suggestions: [],
   error: null,
   loading: false,
 }
@@ -24,6 +25,8 @@ const recipesReducer = (state, action) => {
       return { ...state, error: action.payload }
     case recipesActionTypes.SET_LOADING:
       return { ...state, loading: action.payload }
+    case recipesActionTypes.SET_SUGGESTIONS:
+      return { ...state, suggestions: action.payload }
     default:
       return state
   }
@@ -50,6 +53,9 @@ const RecipeContextProvider = ({ children }) => {
   const setError = (payload) =>
     dispatch({ type: recipesActionTypes.SET_ERROR, payload })
 
+  const setSuggestions = (payload) =>
+    dispatch({ type: recipesActionTypes.SET_SUGGESTIONS, payload })
+
   return (
     <RecipeContext.Provider
       value={{
@@ -60,6 +66,7 @@ const RecipeContextProvider = ({ children }) => {
         clearIngredients,
         setLoading,
         setError,
+        setSuggestions,
       }}
     >
       {children}

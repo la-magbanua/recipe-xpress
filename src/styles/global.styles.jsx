@@ -4,6 +4,10 @@ import { normalize } from 'styled-normalize'
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
 
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   html {
     height: 100%;
     font-family: ${({ theme }) => theme.fontFace};
