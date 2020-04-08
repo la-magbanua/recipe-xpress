@@ -35,38 +35,41 @@ const recipesReducer = (state, action) => {
 const RecipeContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(recipesReducer, INITIAL_STATE)
 
-  const setRecipes = (recipes) =>
-    dispatch({ type: recipesActionTypes.SET_RECIPES, payload: recipes })
+  const actions = {
+    setRecipes(recipes) {
+      dispatch({ type: recipesActionTypes.SET_RECIPES, payload: recipes })
+    },
 
-  const clearRecipes = () =>
-    dispatch({ type: recipesActionTypes.CLEAR_RECIPES })
+    clearRecipes() {
+      dispatch({ type: recipesActionTypes.CLEAR_RECIPES })
+    },
 
-  const addIngredient = (ingredient) =>
-    dispatch({ type: recipesActionTypes.ADD_INGREDIENT, payload: ingredient })
+    addIngredient(ingredient) {
+      dispatch({ type: recipesActionTypes.ADD_INGREDIENT, payload: ingredient })
+    },
 
-  const clearIngredients = () =>
-    dispatch({ type: recipesActionTypes.CLEAR_INGREDIENTS })
+    clearIngredients() {
+      dispatch({ type: recipesActionTypes.CLEAR_INGREDIENTS })
+    },
 
-  const setLoading = (payload) =>
-    dispatch({ type: recipesActionTypes.SET_LOADING, payload })
+    setLoading(payload) {
+      dispatch({ type: recipesActionTypes.SET_LOADING, payload })
+    },
 
-  const setError = (payload) =>
-    dispatch({ type: recipesActionTypes.SET_ERROR, payload })
+    setError(payload) {
+      dispatch({ type: recipesActionTypes.SET_ERROR, payload })
+    },
 
-  const setSuggestions = (payload) =>
-    dispatch({ type: recipesActionTypes.SET_SUGGESTIONS, payload })
+    setSuggestions(payload) {
+      dispatch({ type: recipesActionTypes.SET_SUGGESTIONS, payload })
+    },
+  }
 
   return (
     <RecipeContext.Provider
       value={{
         ...state,
-        setRecipes,
-        clearRecipes,
-        addIngredient,
-        clearIngredients,
-        setLoading,
-        setError,
-        setSuggestions,
+        ...actions,
       }}
     >
       {children}

@@ -11,7 +11,6 @@ const SearchBar = () => {
   const {
     recipes,
     ingredients,
-    addIngredient,
     clearIngredients,
     setRecipes,
     clearRecipes,

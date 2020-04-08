@@ -13,4 +13,10 @@ export const SuggestionItem = styled.div`
   width: 100%;
   padding: 15px 8px;
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.textSub};
+
+  &:hover {
+    background: #f5f5f5;
+    color: ${({ theme }) => theme.colors.textMain};
+  }
 `
