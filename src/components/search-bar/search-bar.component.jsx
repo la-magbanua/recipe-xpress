@@ -8,6 +8,7 @@ import { StyledInput, StyledSearchBar, StyledForm } from './search-bar.styles'
 import SuggestionsList from '../suggestions-list/suggestions-list.component'
 
 import topIngredients from '../../topIngredients.json'
+import { useDebounce } from '../../hooks/useDebounce'
 
 const SearchBar = () => {
   const {
@@ -24,6 +25,8 @@ const SearchBar = () => {
   } = useRecipes()
   const [inputVal, setInputVal] = useState('')
   const [suggestionListIsVisible, setSuggestionListIsVisible] = useState(false)
+
+  const debouncedInputVal = useDebounce(inputVal, 500)
 
   async function fetchRecipes() {
     if (ingredients.length) {
@@ -57,12 +60,12 @@ const SearchBar = () => {
   }
 
   useEffect(() => {
-    if (inputVal !== '') {
+    if (debouncedInputVal) {
       getSuggestions()
     } else {
       setSuggestions([])
     }
-  }, [inputVal])
+  }, [debouncedInputVal])
 
   return (
     <StyledSearchBar>

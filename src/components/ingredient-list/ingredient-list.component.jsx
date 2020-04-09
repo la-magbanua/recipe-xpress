@@ -8,8 +8,6 @@ import { StyledIngredientList } from './ingredient-list.styles'
 const IngredientList = () => {
   const { ingredients } = useRecipes()
 
-  console.log('ingredient list component')
-
   return (
     <StyledIngredientList>
       {ingredients.length

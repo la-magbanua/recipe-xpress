@@ -5,7 +5,7 @@ const RecipeContext = createContext()
 
 const INITIAL_STATE = {
   recipes: [],
-  ingredients: ['nutella', 'banana'],
+  ingredients: [],
   suggestions: [],
   error: null,
   loading: false,
