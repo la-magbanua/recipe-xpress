@@ -18,4 +18,9 @@ export const StyledButton = styled.button`
   color: ${({ theme }) => theme.colors.textMain};
 
   ${({ block }) => (block ? BlockButton : '')};
+
+  &:disabled {
+    cursor: not-allowed;
+    background: #bdbdbd;
+  }
 `

@@ -16,7 +16,7 @@ const RecipeItem = ({ recipe }) => {
 
   const handleClick = () => {
     setIsOpen(true)
-    setCurrentItem(recipe)
+    setCurrentItem(id)
   }
 
   return (

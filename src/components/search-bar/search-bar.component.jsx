@@ -16,7 +16,6 @@ const SearchBar = () => {
     clearIngredients,
     setRecipes,
     clearRecipes,
-    error,
     setError,
     loading,
     setLoading,
@@ -30,7 +29,7 @@ const SearchBar = () => {
     if (ingredients.length) {
       setLoading(true)
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&ranking=1&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&ranking=1&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY_2}`
       )
       const data = await response.json()
       setLoading(false)
@@ -85,17 +84,15 @@ const SearchBar = () => {
         ) : null}
       </StyledForm>
 
-      {ingredients.length ? <IngredientList /> : null}
+      <IngredientList />
 
-      {ingredients.length >= 2 && !error && (
-        <Button
-          onClick={!recipes.length ? fetchRecipes : handleClearRecipes}
-          disabled={loading}
-          block
-        >
-          {!recipes.length ? 'Get Recipes' : 'Clear Recipes'}
-        </Button>
-      )}
+      <Button
+        onClick={!recipes.length ? fetchRecipes : handleClearRecipes}
+        disabled={ingredients.length < 2 || loading}
+        block
+      >
+        {!recipes.length ? 'Get Recipes' : 'Clear Recipes'}
+      </Button>
     </StyledSearchBar>
   )
 }

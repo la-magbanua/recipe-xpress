@@ -9,7 +9,7 @@ import {
 const SkeletonList = () => {
   return (
     <StyledSkeletonList>
-      {Array(5)
+      {Array(4)
         .fill(0)
         .map((el, i) => (
           <SkeletonFrame key={i}>

@@ -7,7 +7,8 @@ export const StyledSkeletonList = styled.div`
 
 export const SkeletonFrame = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: ${({ direction }) => (direction ? direction : 'row')};
+  align-items: ${({ aic }) => (aic ? aic : 'center')};
 `
 
 export const SkeletonItem = styled.div`
