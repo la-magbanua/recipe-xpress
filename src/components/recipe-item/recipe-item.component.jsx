@@ -10,13 +10,17 @@ import {
 
 import { truncateText } from '../../utils'
 
+// dummy data
+import dummyRecipe from '../../dummyRecipe2.json'
+
 const RecipeItem = ({ recipe }) => {
   const { id, title, image } = recipe
   const { setIsOpen, setCurrentItem } = useSlider()
 
   const handleClick = () => {
     setIsOpen(true)
-    setCurrentItem(id)
+    // setCurrentItem(id)
+    setCurrentItem(dummyRecipe)
   }
 
   return (

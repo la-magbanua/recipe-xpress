@@ -1,0 +1,191 @@
+{
+  "vegetarian": true,
+  "vegan": false,
+  "glutenFree": false,
+  "dairyFree": false,
+  "veryHealthy": false,
+  "cheap": false,
+  "veryPopular": true,
+  "sustainable": false,
+  "weightWatcherSmartPoints": 23,
+  "gaps": "no",
+  "lowFodmap": false,
+  "preparationMinutes": 2,
+  "cookingMinutes": 5,
+  "sourceUrl": "http://www.ohsweetbasil.com/grilled-peanut-butter-nutella-and.html",
+  "spoonacularSourceUrl": "https://spoonacular.com/grilled-peanut-butter-nutella-and-banana-sandwich-693411",
+  "aggregateLikes": 1003,
+  "spoonacularScore": 80,
+  "healthScore": 12,
+  "creditsText": "Oh Sweet Basil",
+  "sourceName": "Oh Sweet Basil",
+  "pricePerServing": 84.55,
+  "extendedIngredients": [
+    {
+      "id": 9040,
+      "aisle": "Produce",
+      "image": "bananas.jpg",
+      "consistency": "solid",
+      "name": "banana",
+      "original": "½ Banana",
+      "originalString": "½ Banana",
+      "originalName": "Banana",
+      "amount": 0.5,
+      "unit": "",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": { "amount": 0.5, "unitShort": "", "unitLong": "" },
+        "metric": { "amount": 0.5, "unitShort": "", "unitLong": "" }
+      }
+    },
+    {
+      "id": 18064,
+      "aisle": "Bakery/Bread",
+      "image": "white-bread.jpg",
+      "consistency": "solid",
+      "name": "bread",
+      "original": "2 Slices Good Quality bread (I used Dave's Killer Bread Good Seed Bread. It's one of our favorites)",
+      "originalString": "2 Slices Good Quality bread (I used Dave's Killer Bread Good Seed Bread. It's one of our favorites)",
+      "originalName": "Good Quality bread (I used Dave's Killer Bread Good Seed Bread. It's one of our favorites)",
+      "amount": 2,
+      "unit": "Slices",
+      "meta": [
+        "good",
+        "(I used Dave's Killer Bread Seed Bread. It's one of our favorites)"
+      ],
+      "metaInformation": [
+        "good",
+        "(I used Dave's Killer Bread Seed Bread. It's one of our favorites)"
+      ],
+      "measures": {
+        "us": { "amount": 2, "unitShort": "slice", "unitLong": "slices" },
+        "metric": { "amount": 2, "unitShort": "slice", "unitLong": "slices" }
+      }
+    },
+    {
+      "id": 10116098,
+      "aisle": "Nut butters, Jams, and Honey",
+      "image": "peanut-butter.png",
+      "consistency": "solid",
+      "name": "creamy peanut butter",
+      "original": "Creamy Peanut Butter",
+      "originalString": "Creamy Peanut Butter",
+      "originalName": "Creamy Peanut Butter",
+      "amount": 1,
+      "unit": "serving",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": { "amount": 1, "unitShort": "serving", "unitLong": "serving" },
+        "metric": { "amount": 1, "unitShort": "serving", "unitLong": "serving" }
+      }
+    },
+    {
+      "id": 19125,
+      "aisle": "Nut butters, Jams, and Honey",
+      "image": "hazelnut-chocolate-spread.jpg",
+      "consistency": "solid",
+      "name": "nutella",
+      "original": "Nutella Spread",
+      "originalString": "Nutella Spread",
+      "originalName": "Nutella Spread",
+      "amount": 1,
+      "unit": "serving",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": { "amount": 1, "unitShort": "serving", "unitLong": "serving" },
+        "metric": { "amount": 1, "unitShort": "serving", "unitLong": "serving" }
+      }
+    },
+    {
+      "id": 1145,
+      "aisle": "Milk, Eggs, Other Dairy",
+      "image": "butter-sliced.jpg",
+      "consistency": "solid",
+      "name": "unsalted butter",
+      "original": "Unsalted Butter, softened",
+      "originalString": "Unsalted Butter, softened",
+      "originalName": "Unsalted Butter, softened",
+      "amount": 1,
+      "unit": "serving",
+      "meta": ["unsalted", "softened"],
+      "metaInformation": ["unsalted", "softened"],
+      "measures": {
+        "us": { "amount": 1, "unitShort": "serving", "unitLong": "serving" },
+        "metric": { "amount": 1, "unitShort": "serving", "unitLong": "serving" }
+      }
+    }
+  ],
+  "id": 693411,
+  "title": "Grilled Peanut Butter Nutella and Banana Sandwich",
+  "readyInMinutes": 7,
+  "servings": 1,
+  "image": "https://spoonacular.com/recipeImages/693411-556x370.jpg",
+  "imageType": "jpg",
+  "summary": "Grilled Peanut Butter Nutellan and Banana Sandwich might be just the main course you are searching for. For <b>85 cents per serving</b>, this recipe <b>covers 20%</b> of your daily requirements of vitamins and minerals. Watching your figure? This vegetarian recipe has <b>628 calories</b>, <b>17g of protein</b>, and <b>33g of fat</b> per serving. Many people made this recipe, and 1003 would say it hit the spot. <b>The Fourth Of July</b> will be even more special with this recipe. From preparation to the plate, this recipe takes roughly <b>7 minutes</b>. A mixture of butter, nutella spread, creamy peanut butter, and a handful of other ingredients are all it takes to make this recipe so delicious. To use up the banana you could follow this main course with the <a href=\"https://spoonacular.com/recipes/chocolate-dipped-banana-cupcakes-with-banana-buttercream-326238\">Chocolate Dipped Banana Cupcakes with Banana Buttercream</a> as a dessert. All things considered, we decided this recipe <b>deserves a spoonacular score of 81%</b>. This score is spectacular. Try <a href=\"https://spoonacular.com/recipes/grilled-peanut-butter-and-banana-split-sandwich-204582\">Grilled Peanut Butter and Banana Split Sandwich</a>, <a href=\"https://spoonacular.com/recipes/grilled-peanut-butter-chocolate-banana-sandwich-35749\">Grilled Peanut Butter, Chocolate & Banana Sandwich</a>, and <a href=\"https://spoonacular.com/recipes/puffy-banana-peanut-butter-cup-sweet-grilled-sandwich-49648\">Puffy Banana Peanut Butter Cup Sweet Grilled Sandwich</a> for similar recipes.",
+  "cuisines": [],
+  "dishTypes": [],
+  "diets": ["lacto ovo vegetarian"],
+  "occasions": ["father's day", "4th of july", "summer"],
+  "winePairing": { "pairedWines": [], "pairingText": "", "productMatches": [] },
+  "instructions": "Heat a skillet to medium heat.Spread one side of the bread with peanut butter, and the other with Nutella. Add slices of banana and close the sandwich.Butter one side of the bread and place on the heated skillet. Spread a layer of butter on the other side while the sandwich is cooking.Cook until lightly golden and flip to the other side. Cook again until golden and remove from heat.Let cool for a moment so as to not burn your mouth, and then enjoy!",
+  "analyzedInstructions": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "number": 1,
+          "step": "Heat a skillet to medium heat.",
+          "ingredients": [],
+          "equipment": [
+            { "id": 404645, "name": "frying pan", "image": "pan.png" }
+          ]
+        },
+        {
+          "number": 2,
+          "step": "Spread one side of the bread with peanut butter, and the other with Nutella.",
+          "ingredients": [
+            {
+              "id": 16098,
+              "name": "peanut butter",
+              "image": "peanut-butter.png"
+            },
+            {
+              "id": 19125,
+              "name": "chocolate hazelnut spread",
+              "image": "hazelnut-chocolate-spread.jpg"
+            },
+            { "id": 18064, "name": "bread", "image": "white-bread.jpg" }
+          ],
+          "equipment": []
+        },
+        {
+          "number": 3,
+          "step": "Add slices of banana and close the sandwich.Butter one side of the bread and place on the heated skillet.",
+          "ingredients": [
+            { "id": 9040, "name": "banana", "image": "bananas.jpg" },
+            { "id": 18064, "name": "bread", "image": "white-bread.jpg" }
+          ],
+          "equipment": [
+            { "id": 404645, "name": "frying pan", "image": "pan.png" }
+          ]
+        },
+        {
+          "number": 4,
+          "step": "Spread a layer of butter on the other side while the sandwich is cooking.Cook until lightly golden and flip to the other side. Cook again until golden and remove from heat.",
+          "ingredients": [],
+          "equipment": []
+        },
+        {
+          "number": 5,
+          "step": "Let cool for a moment so as to not burn your mouth, and then enjoy!",
+          "ingredients": [],
+          "equipment": []
+        }
+      ]
+    }
+  ],
+  "originalId": null
+}

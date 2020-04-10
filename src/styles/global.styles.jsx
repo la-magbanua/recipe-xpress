@@ -26,6 +26,9 @@ export const GlobalStyle = createGlobalStyle`
   main {
     flex: 1;
     overflow: hidden;
+    max-width: 400px;
+    margin: 0 auto;
+    background: ${({ theme }) => theme.colors.peach};
   }
 
   a {

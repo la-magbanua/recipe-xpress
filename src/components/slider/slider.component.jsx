@@ -7,12 +7,9 @@ import {
   SkeletonItem,
 } from '../skeleton-list/skeleton-list.styles'
 
-import {
-  StyledSlider,
-  InnerSlider,
-  SliderCloseIcon,
-  SliderDetails,
-} from './slider.styles'
+import SliderItem from '../slider-item/slider-item.component'
+
+import { StyledSlider, InnerSlider, SliderCloseIcon } from './slider.styles'
 
 const Slider = () => {
   const [currentRecipe, setCurrentRecipe] = useState(null)
@@ -20,9 +17,10 @@ const Slider = () => {
 
   const fetchRecipe = async () => {
     const res = await fetch(
-      `https://api.spoonacular.com/recipes/${currentItem}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY_2}`
+      `https://api.spoonacular.com/recipes/${currentItem}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
     )
     const data = await res.json()
+    console.log(data)
     setCurrentRecipe(data)
   }
 
@@ -33,31 +31,30 @@ const Slider = () => {
 
   useEffect(() => {
     if (currentItem) {
-      fetchRecipe(currentItem)
+      // fetchRecipe(currentItem)
+      setCurrentRecipe(currentItem)
     }
-  }, [currentItem, currentRecipe])
+  }, [currentItem])
 
   return (
     <StyledSlider isOpen={isOpen}>
+      <SliderCloseIcon>
+        <IoIosCloseCircleOutline size="1.5em" onClick={handleCloseSlider} />
+      </SliderCloseIcon>
       {currentRecipe ? (
         <InnerSlider>
-          <SliderCloseIcon>
-            <IoIosCloseCircleOutline size="1.5em" onClick={handleCloseSlider} />
-          </SliderCloseIcon>
-          <SliderDetails>
-            <h2>{currentRecipe.title}</h2>
-            <p>Ready in {currentRecipe.readyInMinutes} minutes</p>
-          </SliderDetails>
+          <SliderItem currentRecipe={currentRecipe} />
         </InnerSlider>
       ) : (
         <SkeletonFrame
           direction="column"
           aic="flex-start"
-          style={{ margin: '30px 20px' }}
+          style={{ margin: '50px 20px' }}
         >
+          <SkeletonItem sWidth="100%" sHeight="120px" />
           <SkeletonItem sWidth="75%" sHeight="18px" />
           <SkeletonItem sWidth="75%" sHeight="18px" />
-          <SkeletonItem sWidth="45%" sHeight="10px" />
+          <SkeletonItem sWidth="45%" sHeight="12px" />
         </SkeletonFrame>
       )}
     </StyledSlider>

@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const StyledRecipeList = styled.div`
-  height: 350px;
+  height: 370px;
   max-width: 400px;
-  overflow-y: auto;
-  margin: 16px auto 16px auto;
+  width: 400px;
+  margin: 0 auto 16px auto;
+  padding: 32px 1rem 0 1rem;
 `

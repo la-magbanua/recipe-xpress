@@ -4,9 +4,10 @@ export const StyledIngredientItem = styled.span`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 2px 6px;
+  padding: 3px 6px;
   margin-right: 3px;
-  font-size: 12px;
-  border: 1px solid ${({ theme }) => theme.colors.grey};
+  font-size: 11px;
   border-radius: 9px;
+  background: ${({ theme }) => theme.colors.yellow};
+  color: ${({ theme }) => theme.colors.bgColor};
 `

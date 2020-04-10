@@ -1,0 +1,204 @@
+{
+  "vegetarian": false,
+  "vegan": false,
+  "glutenFree": true,
+  "dairyFree": false,
+  "veryHealthy": false,
+  "cheap": false,
+  "veryPopular": false,
+  "sustainable": false,
+  "weightWatcherSmartPoints": 3,
+  "gaps": "no",
+  "lowFodmap": false,
+  "preparationMinutes": 10,
+  "cookingMinutes": 15,
+  "sourceUrl": "http://addapinch.com/bacon-wrapped-jalapeno-poppers-recipe/",
+  "spoonacularSourceUrl": "https://spoonacular.com/bacon-wrapped-jalapeno-poppers-800519",
+  "aggregateLikes": 33,
+  "spoonacularScore": 9,
+  "healthScore": 0,
+  "creditsText": "Add A Pinch",
+  "sourceName": "Add A Pinch",
+  "pricePerServing": 27.03,
+  "extendedIngredients": [
+    {
+      "id": 10123,
+      "aisle": "Meat",
+      "image": "raw-bacon.png",
+      "consistency": "solid",
+      "name": "bacon",
+      "original": "12 slices bacon, cut in half",
+      "originalString": "12 slices bacon, cut in half",
+      "originalName": "bacon, cut in half",
+      "amount": 12,
+      "unit": "slices",
+      "meta": ["cut in half"],
+      "metaInformation": ["cut in half"],
+      "measures": {
+        "us": {
+          "amount": 12,
+          "unitShort": "slice",
+          "unitLong": "slices"
+        },
+        "metric": {
+          "amount": 12,
+          "unitShort": "slice",
+          "unitLong": "slices"
+        }
+      }
+    },
+    {
+      "id": 1017,
+      "aisle": "Cheese",
+      "image": "cream-cheese.jpg",
+      "consistency": "solid",
+      "name": "cream cheese",
+      "original": "1 (8-ounce) package cream cheese, softened",
+      "originalString": "1 (8-ounce) package cream cheese, softened",
+      "originalName": "package cream cheese, softened",
+      "amount": 8,
+      "unit": "ounce",
+      "meta": ["softened"],
+      "metaInformation": ["softened"],
+      "measures": {
+        "us": {
+          "amount": 8,
+          "unitShort": "oz",
+          "unitLong": "ounces"
+        },
+        "metric": {
+          "amount": 226.796,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 11979,
+      "aisle": "Canned and Jarred;Produce;Ethnic Foods",
+      "image": "jalapeno-pepper.png",
+      "consistency": "solid",
+      "name": "jalapeno",
+      "original": "12 medium jalapeno poppers, cut in half lengthwise with seeds removed",
+      "originalString": "12 medium jalapeno poppers, cut in half lengthwise with seeds removed",
+      "originalName": "jalapeno poppers, cut in half lengthwise with seeds removed",
+      "amount": 12,
+      "unit": "medium",
+      "meta": ["with seeds removed", "cut in half lengthwise "],
+      "metaInformation": ["with seeds removed", "cut in half lengthwise "],
+      "measures": {
+        "us": {
+          "amount": 12,
+          "unitShort": "medium",
+          "unitLong": "mediums"
+        },
+        "metric": {
+          "amount": 12,
+          "unitShort": "medium",
+          "unitLong": "mediums"
+        }
+      }
+    }
+  ],
+  "id": 800519,
+  "title": "Bacon Wrapped Jalapeno Poppers",
+  "readyInMinutes": 25,
+  "servings": 24,
+  "image": "https://spoonacular.com/recipeImages/800519-556x370.jpg",
+  "imageType": "jpg",
+  "summary": "Bacon Wrapped Jalapeno Poppers might be just the hor d'oeuvre you are searching for. One serving contains <b>80 calories</b>, <b>2g of protein</b>, and <b>8g of fat</b>. For <b>27 cents per serving</b>, this recipe <b>covers 2%</b> of your daily requirements of vitamins and minerals. Head to the store and pick up bacon, cream cheese, jalapeno poppers, and a few other things to make it today. It is a good option if you're following a <b>gluten free, primal, and fodmap friendly</b> diet. This recipe is liked by 33 foodies and cooks. From preparation to the plate, this recipe takes approximately <b>25 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 13%</b>. This score is rather bad. Try <a href=\"https://spoonacular.com/recipes/bacon-wrapped-jalapeno-poppers-769263\">Bacon-Wrapped Jalapeno Poppers</a>, <a href=\"https://spoonacular.com/recipes/bacon-wrapped-jalapeno-poppers-714547\">Bacon-Wrapped Jalapeno Poppers</a>, and <a href=\"https://spoonacular.com/recipes/bacon-wrapped-jalapeno-poppers-142598\">Bacon Wrapped Jalapeno Poppers</a> for similar recipes.",
+  "cuisines": [],
+  "dishTypes": [
+    "antipasti",
+    "starter",
+    "snack",
+    "appetizer",
+    "antipasto",
+    "hor d'oeuvre"
+  ],
+  "diets": ["gluten free", "primal"],
+  "occasions": [],
+  "winePairing": {
+    "pairedWines": ["cava", "grenache", "shiraz"],
+    "pairingText": "Cava, Grenache, and Shiraz are great choices for Chili. These juicy reds don't have too much tannin (important for spicy foods), but a sparkling wine like cava can tame the heat even better. The Juve Y Camps Reserva de la Familia Cava Brut Nature with a 4.1 out of 5 star rating seems like a good match. It costs about 19 dollars per bottle.",
+    "productMatches": [
+      {
+        "id": 477378,
+        "title": "Juve Y Camps Reserva de la Familia Cava Brut Nature",
+        "description": "The nose is generous, fruity and elegant, rich and complex from the long aging in bottle. On the palate it is quite dry, soft and round with a long and most exquisite finish.",
+        "price": "$18.99",
+        "imageUrl": "https://spoonacular.com/productImages/477378-312x231.jpg",
+        "averageRating": 0.82,
+        "ratingCount": 5,
+        "score": 0.7575,
+        "link": "https://click.linksynergy.com/deeplink?id=*QCiIS6t4gA&mid=2025&murl=https%3A%2F%2Fwww.wine.com%2Fproduct%2Fjuve-y-camps-reserva-de-la-familia-cava-brut-nature-2015%2F523035"
+      }
+    ]
+  },
+  "instructions": "Preheat oven to 400F.Fill cleaned jalapeno half with cream cheese (or cream cheese and cheddar mixture). Be careful not to overfill as it will ooze out of the jalapeno poppers as they bake.Wrap each stuffed jalapeno half tightly with a piece of bacon. Arrange on a rimmed baking sheet and bake until the bacon is cooked through and crispy, about 15 minutes.Remove from the oven and allow to cool about 5 minutes before serving.",
+  "analyzedInstructions": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "number": 1,
+          "step": "Preheat oven to 400F.Fill cleaned jalapeno half with cream cheese (or cream cheese and cheddar mixture). Be careful not to overfill as it will ooze out of the jalapeno poppers as they bake.Wrap each stuffed jalapeno half tightly with a piece of bacon. Arrange on a rimmed baking sheet and bake until the bacon is cooked through and crispy, about 15 minutes.",
+          "ingredients": [
+            {
+              "id": 1017,
+              "name": "cream cheese",
+              "image": "cream-cheese.jpg"
+            },
+            {
+              "id": 11979,
+              "name": "jalapeno pepper",
+              "image": "jalapeno-pepper.png"
+            },
+            {
+              "id": 10123,
+              "name": "bacon",
+              "image": "raw-bacon.png"
+            }
+          ],
+          "equipment": [
+            {
+              "id": 404727,
+              "name": "baking sheet",
+              "image": "baking-sheet.jpg"
+            },
+            {
+              "id": 404784,
+              "name": "oven",
+              "image": "oven.jpg",
+              "temperature": {
+                "number": 400,
+                "unit": "Fahrenheit"
+              }
+            }
+          ],
+          "length": {
+            "number": 15,
+            "unit": "minutes"
+          }
+        },
+        {
+          "number": 2,
+          "step": "Remove from the oven and allow to cool about 5 minutes before serving.",
+          "ingredients": [],
+          "equipment": [
+            {
+              "id": 404784,
+              "name": "oven",
+              "image": "oven.jpg"
+            }
+          ],
+          "length": {
+            "number": 5,
+            "unit": "minutes"
+          }
+        }
+      ]
+    }
+  ],
+  "originalId": null
+}

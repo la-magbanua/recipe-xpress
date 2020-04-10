@@ -2,17 +2,17 @@ import styled from 'styled-components'
 
 export const StyledSlider = styled.div`
   position: absolute;
-  bottom: -150px;
+  top: ${({ isOpen }) => (isOpen ? `0` : `150%`)};
   left: 50%;
-
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
   display: block;
   max-width: 400px;
   width: 100%;
-  height: ${({ isOpen }) => (isOpen ? `102.5%` : `0%`)};
+  height: ${({ isOpen }) => (isOpen ? `150%` : `0%`)};
   margin: 0 auto;
 
-  background: coral;
-  border-radius: 30px 30px 0 0;
+  background: ${({ theme }) => theme.colors.purple};
+  border-radius: 30px;
   transform: translateX(-50%);
   transition: 0.3s all ease;
 `
@@ -20,9 +20,7 @@ export const InnerSlider = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 1.5rem 1rem 1rem 1rem;
   border-radius: 30px 30px 0 0;
-  /* background: cornflowerblue; */
 `
 
 export const SliderCloseIcon = styled.span`
@@ -30,14 +28,5 @@ export const SliderCloseIcon = styled.span`
   top: 10px;
   right: 20px;
   cursor: pointer;
-`
-
-export const SliderDetails = styled.div`
-  h2 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 14px;
-  }
+  color: ${({ theme }) => theme.colors.bgColor};
 `

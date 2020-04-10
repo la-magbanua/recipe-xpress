@@ -32,7 +32,7 @@ const SearchBar = () => {
     if (ingredients.length) {
       setLoading(true)
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&ranking=1&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY_2}`
+        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&ranking=1&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY}`
       )
       const data = await response.json()
       setLoading(false)

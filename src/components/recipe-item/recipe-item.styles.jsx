@@ -1,15 +1,18 @@
 import styled from 'styled-components'
 
 export const StyledRecipeItem = styled.div`
+  height: 200px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
-  margin-bottom: 16px;
+  margin: 5px;
+  border-radius: ${({ theme }) => theme.borderRadius};
 `
 
 export const ItemImage = styled.div`
-  width: 85px;
-  height: 70px;
-  margin-right: 16px;
+  width: 100%;
+  height: 135px;
   ${({ image }) => (image ? `background: url(${image})` : '')};
   background-size: cover;
   background-position: center center;
@@ -19,14 +22,14 @@ export const ItemImage = styled.div`
 
 export const ItemDetails = styled.div`
   width: 100%;
-  min-height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  word-wrap: break-word;
+  padding: 10px 15px;
 `
 
 export const ItemTitle = styled.p`
-  font-size: 14px;
+  font-size: 13px;
   color: ${({ theme }) => theme.colors.textSub};
   margin: 0;
 `
