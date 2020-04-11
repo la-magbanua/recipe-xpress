@@ -38,8 +38,8 @@ const Slider = () => {
 
   return (
     <StyledSlider isOpen={isOpen}>
-      <SliderCloseIcon>
-        <IoIosCloseCircleOutline size="1.5em" onClick={handleCloseSlider} />
+      <SliderCloseIcon onClick={handleCloseSlider}>
+        <IoIosCloseCircleOutline size="1.5em" />
       </SliderCloseIcon>
       {currentRecipe ? (
         <InnerSlider>

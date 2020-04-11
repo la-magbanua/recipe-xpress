@@ -27,7 +27,7 @@ const RecipeItem = ({ recipe }) => {
     <StyledRecipeItem onClick={handleClick}>
       <ItemImage image={image} />
       <ItemDetails>
-        <ItemTitle>{truncateText(title, 45)}</ItemTitle>
+        <ItemTitle>{truncateText(title, 25)}</ItemTitle>
       </ItemDetails>
     </StyledRecipeItem>
   )

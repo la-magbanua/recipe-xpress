@@ -5,12 +5,17 @@ export const StyledSuggestionsList = styled.div`
   display: block;
   top: 56px;
   left: 50%;
-  max-width: 352px;
   width: 100%;
-  background: ${({ theme }) => theme.colors.bgColor};
+  padding: 0 1.5rem;
   border-radius: 0 0 9px 9px;
   z-index: 999;
   transform: translateX(-50%);
+`
+
+export const InnerSuggestionsList = styled.div`
+  padding: 1rem 0.5rem;
+  background: ${({ theme }) => theme.colors.bgColor};
+  border-radius: 0 0 40px 40px;
 `
 
 export const SuggestionItem = styled.div`
@@ -18,6 +23,7 @@ export const SuggestionItem = styled.div`
   padding: 15px 10px;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.textMain};
+  border-radius: ${({ theme }) => theme.borderRadius};
 
   &:hover {
     background: #f5f5f5;

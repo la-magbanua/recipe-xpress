@@ -4,10 +4,11 @@ export const theme = {
     textSub: '#5C5C5C',
     textXSub: '#727272',
     bgColor: '#fff',
-    grey: '#8b918e',
     yellow: '#f4ac65',
     lightYellow: '#fdd591',
-    peach: '#fef0d5',
+    offWhite: '#fbfbfb',
+    offWhite2: '#edeff0',
+    light: '#ebedee',
   },
   fontWeights: {
     normal: 400,

@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './pages/home/home.component'
 import Header from './components/header/header.component'
 import Footer from './components/footer/footer.component'
+import Slider from './components/slider/slider.component'
 
 import { GlobalStyle } from './styles/global.styles'
 import { Wrap } from './styles/wrap.styles'
@@ -20,6 +21,7 @@ const App = () => {
           </Switch>
         </Wrap>
       </main>
+      <Slider />
       <Footer />
     </>
   )

@@ -4,7 +4,9 @@ import { useRecipes } from '../../contexts/recipes/recipes-context.component'
 import {
   StyledSuggestionsList,
   SuggestionItem,
+  InnerSuggestionsList,
 } from './suggestions-list.styles'
+import { Wrap } from '../../styles/wrap.styles'
 
 const SuggestionsList = ({ setInputVal, setSuggestionListIsVisible }) => {
   const { suggestions, addIngredient, setSuggestions } = useRecipes()
@@ -36,15 +38,17 @@ const SuggestionsList = ({ setInputVal, setSuggestionListIsVisible }) => {
 
   return (
     <StyledSuggestionsList>
-      {suggestions.map((suggestion, i) => (
-        <SuggestionItem
-          key={i}
-          className="suggestion_item"
-          onClick={() => handleAddIngredient(suggestion.name)}
-        >
-          {suggestion.name}
-        </SuggestionItem>
-      ))}
+      <InnerSuggestionsList>
+        {suggestions.map((suggestion, i) => (
+          <SuggestionItem
+            key={i}
+            className="suggestion_item"
+            onClick={() => handleAddIngredient(suggestion.name)}
+          >
+            {suggestion.name}
+          </SuggestionItem>
+        ))}
+      </InnerSuggestionsList>
     </StyledSuggestionsList>
   )
 }

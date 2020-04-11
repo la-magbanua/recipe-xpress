@@ -7,39 +7,51 @@ export const RecipeHeader = styled.div`
 export const Title = styled.h2`
   font-size: 20px;
   margin-bottom: 0;
-  color: ${({ theme }) => theme.colors.lightYellow};
+  color: ${({ theme }) => theme.colors.textMain};
 `
 
 export const Minutes = styled.p`
   font-size: 13px;
   margin-top: 5px;
-  color: #bdbdbd;
+  color: ${({ theme }) => theme.colors.textMain};
 `
 
 export const ItemImage = styled.div`
   width: 100%;
-  height: 120px;
+  height: 160px;
   ${({ bgImg }) => (bgImg ? `background: url(${bgImg})` : '')};
   background-size: cover;
   background-position: center center;
   border-radius: ${({ theme }) => theme.borderRadius};
+
+  @media screen and (max-width: 500px) {
+    height: 100px;
+  }
 `
 
 export const Instructions = styled.div`
-  padding: 1.7rem 1rem;
-  border-radius: 40px 40px 0 0;
-  background: ${({ theme }) => theme.colors.lightYellow};
+  min-height: 100%;
+  padding: 1.4rem 1rem;
+  border-radius: 40px;
+  background: ${({ theme }) => theme.colors.offWhite2};
+
+  @media screen and (max-width: 500px) {
+    padding: 1.7rem 1rem;
+  }
 `
 
 export const Instruction = styled.div`
   display: flex;
   align-items: center;
-  margin: 8px 0;
+  margin: 16px 0;
 
   div {
     display: flex;
     align-items: center;
-    margin-right: 8px;
+
+    &:first-child {
+      margin-right: 12px;
+    }
   }
 
   h3 {
@@ -49,6 +61,7 @@ export const Instruction = styled.div`
     border-radius: 50%;
     width: 28px;
     height: 28px;
+    align-self: flex-start;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,8 +71,17 @@ export const Instruction = styled.div`
 
   p {
     margin: 0;
-    line-height: 20px;
+    line-height: 22px;
     font-size: 14px;
     color: ${({ theme }) => theme.colors.textMain};
+  }
+
+  /* mobile view */
+  @media screen and (max-width: 500px) {
+    margin: 16px 0;
+
+    p {
+      line-height: 20px;
+    }
   }
 `

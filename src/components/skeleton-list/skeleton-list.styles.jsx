@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledSkeletonList = styled.div`
-  max-width: 400px;
+  max-width: 500px;
   margin: 16px auto;
   padding: 20px;
   display: grid;
@@ -21,7 +21,10 @@ export const SkeletonItem = styled.div`
   width: ${({ sWidth }) => (sWidth ? sWidth : '100%')};
   margin-bottom: 16px;
   border-radius: ${({ theme }) => theme.borderRadius};
-  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background: ${({ dark }) =>
+    dark
+      ? `linear-gradient(-90deg, #3f4240 0%, #494d4b 50%, #3f4240 100%)`
+      : `linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%)`};
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
 

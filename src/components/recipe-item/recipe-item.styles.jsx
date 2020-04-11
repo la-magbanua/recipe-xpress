@@ -8,6 +8,7 @@ export const StyledRecipeItem = styled.div`
   cursor: pointer;
   margin: 5px;
   border-radius: ${({ theme }) => theme.borderRadius};
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
 `
 
 export const ItemImage = styled.div`
@@ -17,19 +18,28 @@ export const ItemImage = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) =>
+    `${theme.borderRadius} ${theme.borderRadius} 0 0`};
 `
 
 export const ItemDetails = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
   word-wrap: break-word;
   padding: 10px 15px;
+
+  @media screen and (max-width: 380px) {
+    padding: 10px;
+  }
 `
 
 export const ItemTitle = styled.p`
-  font-size: 13px;
-  color: ${({ theme }) => theme.colors.textSub};
+  font-size: 14px;
+  color: ${({ theme }) => theme.colors.textXSub};
   margin: 0;
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+
+  @media screen and (max-width: 500px) {
+    font-size: 13px;
+  }
 `

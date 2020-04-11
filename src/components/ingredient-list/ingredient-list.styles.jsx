@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
 export const StyledIngredientList = styled.div`
-  margin: 10px 0 10px;
+  margin: 16px 0 24px;
   height: 20px;
 `
