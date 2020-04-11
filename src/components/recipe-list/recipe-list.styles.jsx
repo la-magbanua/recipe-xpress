@@ -30,3 +30,13 @@ export const StyledRecipeList = styled.div`
     display: none;
   }
 `
+
+export const Placeholder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: ${({ theme }) => theme.colors.textXSub};
+  }
+`

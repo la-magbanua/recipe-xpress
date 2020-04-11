@@ -10,6 +10,7 @@ const INITIAL_STATE = {
   recipes: dummyRecipes,
   ingredients: ['cheese', 'bacon'],
   suggestions: [],
+  currentRecipe: null,
   error: null,
   loading: false,
 }
@@ -30,6 +31,8 @@ const recipesReducer = (state, action) => {
       return { ...state, loading: action.payload }
     case recipesActionTypes.SET_SUGGESTIONS:
       return { ...state, suggestions: action.payload }
+    case recipesActionTypes.SET_CURRENT_RECIPE:
+      return { ...state, currentRecipe: action.payload }
     default:
       return state
   }
@@ -65,6 +68,10 @@ const RecipeContextProvider = ({ children }) => {
 
     setSuggestions(payload) {
       dispatch({ type: recipesActionTypes.SET_SUGGESTIONS, payload })
+    },
+
+    setCurrentRecipe(payload) {
+      dispatch({ type: recipesActionTypes.SET_CURRENT_RECIPE, payload })
     },
   }
 

@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 
 export const StyledRecipeItem = styled.div`
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
   margin: 5px;
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
+
+  a {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
 `
 
 export const ItemImage = styled.div`

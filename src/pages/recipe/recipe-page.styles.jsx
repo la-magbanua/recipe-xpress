@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
+export const StyledRecipePage = styled.div`
+  background: ${({ theme }) => theme.colors.offWhite};
+`
+
 export const RecipeHeader = styled.div`
-  margin-top: 20px;
   padding: 1.5rem 1rem 10px 1rem;
 `
+
 export const Title = styled.h2`
   font-size: 20px;
   margin-bottom: 0;
@@ -25,15 +29,15 @@ export const ItemImage = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius};
 
   @media screen and (max-width: 500px) {
-    height: 100px;
+    height: 130px;
   }
 `
 
 export const Instructions = styled.div`
   min-height: 100%;
   padding: 1.4rem 1rem;
-  border-radius: 40px;
-  background: ${({ theme }) => theme.colors.offWhite2};
+  border-radius: 40px 40px 0 0;
+  background: ${({ theme }) => theme.colors.light};
 
   @media screen and (max-width: 500px) {
     padding: 1.7rem 1rem;
@@ -72,7 +76,7 @@ export const Instruction = styled.div`
   p {
     margin: 0;
     line-height: 22px;
-    font-size: 14px;
+    font-size: 15px;
     color: ${({ theme }) => theme.colors.textMain};
   }
 

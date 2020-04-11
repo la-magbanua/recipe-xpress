@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { RecipeContextProvider } from './contexts/recipes/recipes-context.component'
-import { SliderContextProvider } from './contexts/slider/slider-context.component'
 import { ThemeProvider } from 'styled-components'
 import App from './App.component'
 import * as serviceWorker from './serviceWorker'
@@ -12,13 +11,11 @@ import { theme } from './styles/theme.styles'
 ReactDOM.render(
   <React.StrictMode>
     <RecipeContextProvider>
-      <SliderContextProvider>
-        <ThemeProvider theme={theme}>
-          <Router>
-            <App />
-          </Router>
-        </ThemeProvider>
-      </SliderContextProvider>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <App />
+        </Router>
+      </ThemeProvider>
     </RecipeContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
