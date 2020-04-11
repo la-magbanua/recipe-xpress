@@ -1,14 +1,11 @@
 import React, { useContext, useReducer, createContext } from 'react'
 import { recipesActionTypes } from './recipes.types'
 
-// temporary data
-import dummyRecipes from '../../dummyRecipes.json'
-
 const RecipeContext = createContext()
 
 const INITIAL_STATE = {
-  recipes: dummyRecipes,
-  ingredients: ['cheese', 'bacon'],
+  recipes: [],
+  ingredients: [],
   suggestions: [],
   currentRecipe: null,
   error: null,

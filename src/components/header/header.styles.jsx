@@ -4,10 +4,8 @@ export const StyledHeader = styled.header``
 
 export const InnerHeader = styled.div`
   height: 60px;
-  max-width: 500px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 50px 1fr 50px;
+  grid-template-columns: 35px 1fr 35px;
   justify-items: center;
   align-items: center;
   background: ${({ theme }) => theme.colors.offWhite};

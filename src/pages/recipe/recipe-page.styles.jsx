@@ -89,3 +89,15 @@ export const Instruction = styled.div`
     }
   }
 `
+
+export const RecipeSkeleton = styled.div`
+  width: 500px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+`

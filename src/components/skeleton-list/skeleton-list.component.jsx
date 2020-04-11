@@ -6,7 +6,7 @@ import {
   StyledSkeletonList,
 } from './skeleton-list.styles'
 
-const SkeletonList = () => {
+export const SkeletonList = () => {
   return (
     <StyledSkeletonList>
       {Array(2)
@@ -21,4 +21,6 @@ const SkeletonList = () => {
   )
 }
 
-export default SkeletonList
+export const Skel = (props) => {
+  return <SkeletonItem {...props} />
+}
