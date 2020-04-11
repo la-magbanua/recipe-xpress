@@ -18,7 +18,7 @@ const Header = ({ location }) => {
             <Link>{''}</Link>
           )}
           <Link to="/">
-            <BrandText>Recipe Express</BrandText>
+            <BrandText>Recipe Xpress</BrandText>
           </Link>
           <Link></Link>
         </InnerHeader>
