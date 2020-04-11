@@ -4,7 +4,7 @@ export const StyledSearchBar = styled.div`
   max-width: 400px;
   margin: 0 auto;
   position: relative;
-  background: ${({ theme }) => theme.colors.lightYellow};
+  background: ${({ theme }) => theme.colors.yellow};
   padding: 1rem 1.5rem;
   border-radius: 0 0 30px 30px;
 `

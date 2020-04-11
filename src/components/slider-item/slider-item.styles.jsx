@@ -7,7 +7,7 @@ export const RecipeHeader = styled.div`
 export const Title = styled.h2`
   font-size: 20px;
   margin-bottom: 0;
-  color: ${({ theme }) => theme.colors.bgColor};
+  color: ${({ theme }) => theme.colors.lightYellow};
 `
 
 export const Minutes = styled.p`
@@ -28,7 +28,7 @@ export const ItemImage = styled.div`
 export const Instructions = styled.div`
   padding: 1.7rem 1rem;
   border-radius: 40px 40px 0 0;
-  background: ${({ theme }) => theme.colors.peach};
+  background: ${({ theme }) => theme.colors.lightYellow};
 `
 
 export const Instruction = styled.div`
@@ -52,7 +52,7 @@ export const Instruction = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: ${({ theme }) => theme.colors.purple};
+    background: ${({ theme }) => theme.colors.textMain};
     color: ${({ theme }) => theme.colors.bgColor};
   }
 

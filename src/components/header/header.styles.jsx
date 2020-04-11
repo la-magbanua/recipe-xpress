@@ -9,7 +9,7 @@ export const InnerHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${({ theme }) => theme.colors.lightYellow};
+  background: ${({ theme }) => theme.colors.yellow};
 `
 export const BrandText = styled.h3`
   font-size: 1.6rem;

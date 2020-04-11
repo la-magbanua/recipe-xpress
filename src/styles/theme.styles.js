@@ -8,7 +8,6 @@ export const theme = {
     yellow: '#f4ac65',
     lightYellow: '#fdd591',
     peach: '#fef0d5',
-    purple: '#3c58b9',
   },
   fontWeights: {
     normal: 400,

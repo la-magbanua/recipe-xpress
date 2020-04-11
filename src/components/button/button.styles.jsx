@@ -16,7 +16,7 @@ export const StyledButton = styled.button`
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   letter-spacing: 1.2px;
   color: ${({ theme }) => theme.colors.bgColor};
-  background: ${({ theme }) => theme.colors.purple};
+  background: ${({ theme }) => theme.colors.textMain};
 
   ${({ block }) => (block ? BlockButton : '')};
 

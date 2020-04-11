@@ -8,6 +8,6 @@ export const StyledIngredientItem = styled.span`
   margin-right: 3px;
   font-size: 11px;
   border-radius: 9px;
-  background: ${({ theme }) => theme.colors.yellow};
-  color: ${({ theme }) => theme.colors.bgColor};
+  background: ${({ theme }) => theme.colors.lightYellow};
+  color: ${({ theme }) => theme.colors.textMain};
 `

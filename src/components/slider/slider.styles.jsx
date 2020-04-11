@@ -11,7 +11,7 @@ export const StyledSlider = styled.div`
   height: ${({ isOpen }) => (isOpen ? `150%` : `0%`)};
   margin: 0 auto;
 
-  background: ${({ theme }) => theme.colors.purple};
+  background: ${({ theme }) => theme.colors.textMain};
   border-radius: 30px;
   transform: translateX(-50%);
   transition: 0.3s all ease;
