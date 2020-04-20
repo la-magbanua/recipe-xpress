@@ -1,9 +1,9 @@
 import React from 'react'
-import { useRecipes } from '../../contexts/recipes/recipes-context.component'
+import { useRecipes } from '../../contexts/recipes/recipes-context'
 
-import IngredientItem from '../ingredient-item/ingredient-item.component'
+import IngredientItem from '../ingredient-item/ingredient-item'
 
-import { StyledIngredientList } from './ingredient-list.styles'
+import { StyledIngredientList } from './ingredient-list-styles'
 
 const IngredientList = () => {
   const { ingredients } = useRecipes()

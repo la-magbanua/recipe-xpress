@@ -1,6 +1,6 @@
 import React from 'react'
-import { Wrap } from '../../styles/wrap.styles'
-import { StyledFooter, InnerFooter } from './footer.styles'
+import { Wrap } from '../wrap/wrap'
+import { StyledFooter, InnerFooter } from './footer-styles'
 
 const Footer = () => {
   return (

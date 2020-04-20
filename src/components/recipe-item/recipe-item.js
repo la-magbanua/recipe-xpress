@@ -6,7 +6,7 @@ import {
   ItemImage,
   ItemDetails,
   ItemTitle,
-} from './recipe-item.styles'
+} from './recipe-item-styles'
 
 import { truncateText } from '../../utils'
 

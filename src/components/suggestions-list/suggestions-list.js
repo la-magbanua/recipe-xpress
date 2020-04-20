@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
-import { useRecipes } from '../../contexts/recipes/recipes-context.component'
+import { useRecipes } from '../../contexts/recipes/recipes-context'
 
 import {
   StyledSuggestionsList,
   SuggestionItem,
   InnerSuggestionsList,
-} from './suggestions-list.styles'
-import { Wrap } from '../../styles/wrap.styles'
+} from './suggestions-list-styles'
 
 const SuggestionsList = ({ setInputVal, setSuggestionListIsVisible }) => {
   const { suggestions, addIngredient, setSuggestions } = useRecipes()

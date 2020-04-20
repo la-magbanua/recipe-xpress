@@ -2,8 +2,8 @@ import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { IoIosArrowBack } from 'react-icons/io'
 
-import { Wrap } from '../../styles/wrap.styles'
-import { StyledHeader, InnerHeader, BrandText } from './header.styles'
+import { Wrap } from '../wrap/wrap'
+import { StyledHeader, InnerHeader, BrandText } from './header-styles'
 
 const Header = ({ location }) => {
   return (

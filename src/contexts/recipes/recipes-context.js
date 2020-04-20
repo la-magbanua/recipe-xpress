@@ -1,5 +1,5 @@
 import React, { useContext, useReducer, createContext } from 'react'
-import { recipesActionTypes } from './recipes.types'
+import { recipesActionTypes } from './recipes-types'
 
 const RecipeContext = createContext()
 
@@ -35,7 +35,7 @@ const recipesReducer = (state, action) => {
   }
 }
 
-const RecipeContextProvider = ({ children }) => {
+const RecipeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(recipesReducer, INITIAL_STATE)
 
   const actions = {
@@ -86,4 +86,4 @@ const RecipeContextProvider = ({ children }) => {
 
 const useRecipes = () => useContext(RecipeContext)
 
-export { RecipeContextProvider, useRecipes }
+export { RecipeProvider, useRecipes }

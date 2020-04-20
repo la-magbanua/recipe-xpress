@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { useRecipes } from '../../contexts/recipes/recipes-context.component'
-import { Skel } from '../../components/skeleton-list/skeleton-list.component'
+import React, { useEffect } from 'react'
+import { useRecipes } from '../../contexts/recipes/recipes-context'
+import { Skel } from '../../components/skeleton-list/skeleton-list'
 
 import {
   StyledRecipePage,
@@ -11,7 +11,7 @@ import {
   Instructions,
   Instruction,
   RecipeSkeleton,
-} from './recipe-page.styles'
+} from './recipe-page-styles'
 
 const RecipePage = ({ match }) => {
   const { currentRecipe, setCurrentRecipe, setLoading } = useRecipes()

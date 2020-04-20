@@ -1,10 +1,10 @@
 import React from 'react'
-import { useRecipes } from '../../contexts/recipes/recipes-context.component'
+import { useRecipes } from '../../contexts/recipes/recipes-context'
 
-import RecipeItem from '../recipe-item/recipe-item.component'
-import { SkeletonList } from '../skeleton-list/skeleton-list.component'
+import RecipeItem from '../recipe-item/recipe-item'
+import { SkeletonList } from '../skeleton-list/skeleton-list'
 
-import { StyledRecipeList, Placeholder } from './recipe-list.styles'
+import { StyledRecipeList, Placeholder } from './recipe-list-styles'
 
 import SlickSlider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -27,7 +27,7 @@ const RecipeList = () => {
     <StyledRecipeList>
       {recipes.length ? (
         <SlickSlider {...settings}>
-          {recipes.map((recipe) => (
+          {recipes.map(recipe => (
             <RecipeItem key={recipe.id} recipe={recipe} />
           ))}
         </SlickSlider>

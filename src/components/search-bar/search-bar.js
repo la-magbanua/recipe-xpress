@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useRecipes } from '../../contexts/recipes/recipes-context.component'
+import { useRecipes } from '../../contexts/recipes/recipes-context'
 
-import IngredientList from '../ingredient-list/ingredient-list.component'
-import Button from '../button/button.component'
+import IngredientList from '../ingredient-list/ingredient-list'
+import Button from '../button/button'
 
-import { StyledInput, StyledSearchBar, StyledForm } from './search-bar.styles'
-import SuggestionsList from '../suggestions-list/suggestions-list.component'
+import { StyledInput, StyledSearchBar, StyledForm } from './search-bar-styles'
+import SuggestionsList from '../suggestions-list/suggestions-list'
 
 import topIngredients from '../../topIngredients.json'
 import { useDebounce } from '../../hooks/useDebounce'
@@ -54,7 +54,7 @@ const SearchBar = () => {
 
   function getSuggestions() {
     const newIngredients = topIngredients
-      .filter((ingredient) => ingredient.name.includes(inputVal))
+      .filter(ingredient => ingredient.name.includes(inputVal))
       .slice(0, 8)
     setSuggestions(newIngredients)
   }

@@ -27,14 +27,8 @@ export const GlobalStyle = createGlobalStyle`
 
   main {
     flex: 1;
-    max-width: 500px;
     margin: 0 auto;
     background: ${({ theme }) => theme.colors.offWhite2};
-
-    @media screen and (max-width: 480px) {
-      max-width: none;
-      width: 100%;
-    }
   }
 
   a {

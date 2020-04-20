@@ -4,7 +4,7 @@ import {
   SkeletonItem,
   SkeletonFrame,
   StyledSkeletonList,
-} from './skeleton-list.styles'
+} from './skeleton-list-styles'
 
 export const SkeletonList = () => {
   return (
@@ -21,6 +21,6 @@ export const SkeletonList = () => {
   )
 }
 
-export const Skel = (props) => {
+export const Skel = props => {
   return <SkeletonItem {...props} />
 }
