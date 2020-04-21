@@ -1,47 +1,64 @@
 import styled from 'styled-components'
 
-export const StyledRecipePage = styled.div`
-  background: ${({ theme }) => theme.colors.offWhite};
-`
+export const StyledRecipePage = styled.div``
 
 export const RecipeHeader = styled.div`
   padding: 1.5rem 1rem 10px 1rem;
+  display: flex;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+`
+
+export const ItemDetails = styled.div`
+  margin-left: 30px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 500px) {
+    margin-left: 0;
+  }
 `
 
 export const Title = styled.h2`
-  font-size: 20px;
-  margin-bottom: 0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
   color: ${({ theme }) => theme.colors.textMain};
 `
 
 export const Minutes = styled.p`
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 5px;
-  color: ${({ theme }) => theme.colors.textMain};
+  color: ${({ theme }) => theme.colors.textSub};
 `
 
 export const ItemImage = styled.div`
-  width: 100%;
-  height: 160px;
+  align-self: center;
+  width: 300px;
+  height: 400px;
   ${({ bgImg }) => (bgImg ? `background: url(${bgImg})` : '')};
   background-size: cover;
   background-position: center center;
   border-radius: ${({ theme }) => theme.borderRadius};
 
   @media screen and (max-width: 500px) {
-    height: 130px;
+    height: 200px;
   }
 `
 
 export const Instructions = styled.div`
   min-height: 100%;
-  padding: 1.4rem 1rem;
-  border-radius: 40px 40px 0 0;
-  background: ${({ theme }) => theme.colors.light};
+  padding: 0;
 
   @media screen and (max-width: 500px) {
-    padding: 1.7rem 1rem;
+    padding: 0;
   }
+`
+
+export const InstructionsHeading = styled.h3`
+  color: ${({ theme }) => theme.colors.textMain};
 `
 
 export const Instruction = styled.div`
@@ -54,7 +71,7 @@ export const Instruction = styled.div`
     align-items: center;
 
     &:first-child {
-      margin-right: 12px;
+      margin-right: 20px;
     }
   }
 
@@ -75,9 +92,10 @@ export const Instruction = styled.div`
 
   p {
     margin: 0;
-    line-height: 22px;
-    font-size: 15px;
-    color: ${({ theme }) => theme.colors.textMain};
+    line-height: 26px;
+    font-size: 16px;
+    max-width: 500px;
+    color: ${({ theme }) => theme.colors.textSub};
   }
 
   /* mobile view */
@@ -85,19 +103,31 @@ export const Instruction = styled.div`
     margin: 16px 0;
 
     p {
-      line-height: 20px;
+      line-height: 22px;
     }
   }
 `
 
 export const RecipeSkeleton = styled.div`
-  width: 500px;
+  width: 100%;
   padding: 1.5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 500px) {
-    width: 100%;
+    flex-direction: column;
+  }
+`
+
+export const SkelImg = styled.div`
+  width: 100%;
+`
+
+export const SkelDetails = styled.div`
+  width: 100%;
+
+  @media screen and (max-width: 500px) {
+    margin-left: 30px;
+    margin-top: 30px;
   }
 `

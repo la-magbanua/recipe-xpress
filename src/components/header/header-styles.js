@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const StyledHeader = styled.header``
 
 export const InnerHeader = styled.div`
-  height: 60px;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 35px 1fr 35px;
   justify-items: center;
@@ -11,8 +12,7 @@ export const InnerHeader = styled.div`
   background: ${({ theme }) => theme.colors.offWhite};
 
   @media screen and (max-width: 500px) {
-    max-width: none;
-    width: 100%;
+    grid-template-columns: 35px 1fr 35px;
   }
 `
 export const BrandText = styled.h3`

@@ -7,10 +7,14 @@ const StyledWrap = styled.div`
 
   @media screen and (max-width: 500px) {
     max-width: 100%;
-    padding: 0 1.15rem;
+    padding: ${({ noPad }) => (noPad ? '0' : '0 1.15rem')};
   }
 `
 
-export const Wrap = ({ children }) => {
-  return <StyledWrap className="wrap">{children}</StyledWrap>
+export const Wrap = ({ children, ...props }) => {
+  return (
+    <StyledWrap className="wrap" {...props}>
+      {children}
+    </StyledWrap>
+  )
 }

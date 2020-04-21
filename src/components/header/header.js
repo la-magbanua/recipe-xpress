@@ -8,7 +8,7 @@ import { StyledHeader, InnerHeader, BrandText } from './header-styles'
 const Header = ({ location }) => {
   return (
     <StyledHeader>
-      <Wrap>
+      <Wrap noPad>
         <InnerHeader>
           {location.pathname !== '/' ? (
             <Link to="/">

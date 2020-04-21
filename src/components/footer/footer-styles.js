@@ -6,7 +6,6 @@ export const InnerFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${({ theme }) => theme.colors.offWhite2};
 
   p {
     font-size: 10px;
