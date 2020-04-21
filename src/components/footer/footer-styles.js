@@ -3,8 +3,6 @@ import styled from 'styled-components'
 export const StyledFooter = styled.footer``
 
 export const InnerFooter = styled.div`
-  max-width: 500px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;

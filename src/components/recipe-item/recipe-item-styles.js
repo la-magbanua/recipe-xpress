@@ -1,16 +1,21 @@
 import styled from 'styled-components'
 
 export const StyledRecipeItem = styled.div`
-  margin: 5px;
+  height: 100%;
+  margin: 5px 10px;
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
 
   a {
-    height: 200px;
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 5px;
   }
 `
 
@@ -43,6 +48,7 @@ export const ItemTitle = styled.p`
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 
   @media screen and (max-width: 500px) {
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 18px;
   }
 `

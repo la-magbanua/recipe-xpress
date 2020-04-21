@@ -1,16 +1,21 @@
 import styled from 'styled-components'
 
 export const StyledSearchBar = styled.div`
-  max-width: 500px;
-  margin: 0 auto;
-  position: relative;
   background: ${({ theme }) => theme.colors.offWhite};
   padding: 1rem 1.5rem;
-  border-radius: 0 0 30px 30px;
 
-  @media screen and (max-width: 480px) {
-    max-width: none;
+  @media screen and (max-width: 500px) {
     width: 100%;
+  }
+`
+
+export const SearchBarWrapper = styled.div`
+  max-width: 500px;
+  position: relative;
+  margin: 0 auto;
+
+  @media screen and (max-width: 500px) {
+    max-width: 100% !important;
   }
 `
 

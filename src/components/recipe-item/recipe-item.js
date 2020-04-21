@@ -10,6 +10,8 @@ import {
 
 import { truncateText } from '../../utils'
 
+// import dum from '../../dummyRecipe.json'
+
 const RecipeItem = ({ recipe }) => {
   const { id, title, image } = recipe
 

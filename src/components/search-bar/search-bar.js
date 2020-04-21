@@ -4,7 +4,12 @@ import { useRecipes } from '../../contexts/recipes/recipes-context'
 import IngredientList from '../ingredient-list/ingredient-list'
 import Button from '../button/button'
 
-import { StyledInput, StyledSearchBar, StyledForm } from './search-bar-styles'
+import {
+  StyledInput,
+  StyledSearchBar,
+  StyledForm,
+  SearchBarWrapper,
+} from './search-bar-styles'
 import SuggestionsList from '../suggestions-list/suggestions-list'
 
 import topIngredients from '../../topIngredients.json'
@@ -69,33 +74,35 @@ const SearchBar = () => {
 
   return (
     <StyledSearchBar>
-      <StyledForm>
-        <StyledInput
-          name="food"
-          type="text"
-          value={inputVal}
-          placeholder="Enter ingredients here"
-          onChange={handleInputChange}
-          onFocus={() => setSuggestionListIsVisible(true)}
-          autoFocus
-        />
-        {suggestions.length && suggestionListIsVisible ? (
-          <SuggestionsList
-            setInputVal={setInputVal}
-            setSuggestionListIsVisible={setSuggestionListIsVisible}
+      <SearchBarWrapper>
+        <StyledForm>
+          <StyledInput
+            name="food"
+            type="text"
+            value={inputVal}
+            placeholder="Enter ingredients here"
+            onChange={handleInputChange}
+            onFocus={() => setSuggestionListIsVisible(true)}
+            autoFocus
           />
-        ) : null}
-      </StyledForm>
+          {suggestions.length && suggestionListIsVisible ? (
+            <SuggestionsList
+              setInputVal={setInputVal}
+              setSuggestionListIsVisible={setSuggestionListIsVisible}
+            />
+          ) : null}
+        </StyledForm>
 
-      <IngredientList />
+        <IngredientList />
 
-      <Button
-        onClick={!recipes.length ? fetchRecipes : handleClearRecipes}
-        disabled={ingredients.length < 2 || loading}
-        block
-      >
-        {!recipes.length ? 'Get Recipes' : 'Clear Recipes'}
-      </Button>
+        <Button
+          onClick={!recipes.length ? fetchRecipes : handleClearRecipes}
+          disabled={ingredients.length < 2 || loading}
+          block
+        >
+          {!recipes.length ? 'Get Recipes' : 'Clear Recipes'}
+        </Button>
+      </SearchBarWrapper>
     </StyledSearchBar>
   )
 }

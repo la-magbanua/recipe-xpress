@@ -1,42 +1,82 @@
 import styled from 'styled-components'
 
 export const StyledRecipeList = styled.div`
-  max-width: 500px;
-  width: 500px;
-  height: 100%;
+  width: 100%;
   margin: 0 auto 16px auto;
-  padding: 32px 0 0 0;
+  padding: 0;
 
-  @media screen and (max-width: 480px) {
-    max-width: none;
+  @media screen and (max-width: 500px) {
     width: 100%;
   }
 
-  .slick-list {
-    height: 100% !important;
-    padding: 20px 0;
+  .carousel {
+    position: relative;
   }
 
-  .slick-slide div {
-    margin: 0 8px;
+  .slider {
+    padding: 30px;
+  }
 
-    @media screen and (max-width: 460px) {
-      margin: 0 4px;
+  /* carousel buttons */
+  button[aria-label='previous'],
+  button[aria-label='next'] {
+    position: absolute;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: white;
+    color: ${({ theme }) => theme.colors.textMain};
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+
+    @media screen and (max-width: 500px) {
+      width: 42px;
+      height: 42px;
     }
   }
 
-  .slick-prev:before,
-  .slick-next:before {
-    display: none;
+  button[aria-label='previous'] {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+
+    @media screen and (max-width: 500px) {
+      left: -15px;
+    }
+  }
+
+  button[aria-label='next'] {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -25px;
+
+    @media screen and (max-width: 500px) {
+      right: -15px;
+    }
+  }
+
+  button:disabled {
+    opacity: 0.3;
   }
 `
 
 export const Placeholder = styled.div`
+  height: 300px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   p {
     color: ${({ theme }) => theme.colors.textXSub};
+    opacity: 50%;
+
+    @media screen and (max-width: 500px) {
+      margin-top: 0;
+    }
   }
 `

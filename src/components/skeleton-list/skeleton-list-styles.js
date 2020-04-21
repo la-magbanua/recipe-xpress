@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const StyledSkeletonList = styled.div`
-  max-width: 500px;
-  width: 500px;
+  /* max-width: 500px;
+  width: 500px; */
   margin: 16px auto;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   grid-gap: 1rem;
 
   @media screen and (max-width: 500px) {
@@ -25,7 +25,7 @@ export const SkeletonItem = styled.div`
   height: ${({ sHeight }) => (sHeight ? sHeight : '20px')};
   width: ${({ sWidth }) => (sWidth ? sWidth : '100%')};
   margin-bottom: ${({ mBot }) => (mBot ? mBot : '16px')};
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: 4px;
   background: linear-gradient(-90deg, #cfd3d6 0%, #bdc3c7 50%, #cfd3d6 100%);
   background-size: 400% 400%;
   animation: pulse 0.7s ease-in-out infinite;

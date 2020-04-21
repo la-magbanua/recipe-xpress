@@ -15,12 +15,12 @@ const Header = ({ location }) => {
               <IoIosArrowBack size="1.4rem" />
             </Link>
           ) : (
-            <Link>{''}</Link>
+            <span>{''}</span>
           )}
           <Link to="/">
             <BrandText>Recipe Xpress</BrandText>
           </Link>
-          <Link></Link>
+          <span></span>
         </InnerHeader>
       </Wrap>
     </StyledHeader>

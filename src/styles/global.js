@@ -21,14 +21,12 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
   }
 
   main {
     flex: 1;
+    width: 100%;
     margin: 0 auto;
-    background: ${({ theme }) => theme.colors.offWhite2};
   }
 
   a {
