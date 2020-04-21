@@ -120,7 +120,13 @@ export const RecipeSkeleton = styled.div`
 `
 
 export const SkelImg = styled.div`
-  width: 100%;
+  width: 400px;
+  margin-right: 30px;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    margin-right: 0;
+  }
 `
 
 export const SkelDetails = styled.div`
