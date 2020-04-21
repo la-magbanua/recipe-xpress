@@ -10,14 +10,12 @@ import {
 
 import { truncateText } from '../../utils'
 
-import dum from '../../dummyRecipe.json'
-
 const RecipeItem = ({ recipe }) => {
   const { id, title, image } = recipe
 
   return (
     <StyledRecipeItem>
-      <Link to={`/recipe/${dum.id}`}>
+      <Link to={`/recipe/${id}`}>
         <ItemImage image={image} />
         <ItemDetails>
           <ItemTitle>{truncateText(title, 25)}</ItemTitle>
