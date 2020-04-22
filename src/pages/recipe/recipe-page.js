@@ -21,9 +21,17 @@ import {
 const variants = {
   initial: {
     opacity: 0,
+    x: -30,
   },
   animate: {
     opacity: 1,
+    x: 0,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+  exit: {
+    opacity: 0,
     transition: {
       staggerChildren: 0.15,
     },
@@ -39,6 +47,10 @@ const imageVariant = {
     opacity: 1,
     x: 0,
   },
+  exit: {
+    opacity: 0,
+    scale: 0.2,
+  },
 }
 
 const titleVariant = {
@@ -49,6 +61,10 @@ const titleVariant = {
   animate: {
     opacity: 1,
     y: 0,
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.2,
   },
 }
 
@@ -61,6 +77,10 @@ const minutesVariant = {
     opacity: 1,
     y: 0,
   },
+  exit: {
+    opacity: 0,
+    scale: 0.2,
+  },
 }
 
 const instructionsVariant = {
@@ -71,6 +91,10 @@ const instructionsVariant = {
   animate: {
     opacity: 1,
     y: 0,
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.2,
   },
 }
 
@@ -118,7 +142,12 @@ const RecipePage = ({ match }) => {
       </SkelDetails>
     </RecipeSkeleton>
   ) : (
-    <StyledRecipePage initial="initial" animate="animate" variants={variants}>
+    <StyledRecipePage
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={variants}
+    >
       <RecipeHeader>
         <ItemImage bgImg={currentRecipe.image} variants={imageVariant} />
         <ItemDetails>

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const StyledSearchBar = styled.div`
+export const StyledSearchBar = styled(motion.div)`
   background: ${({ theme }) => theme.colors.offWhite};
   padding: 1rem 1.5rem;
 

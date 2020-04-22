@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const StyledRecipeList = styled.div`
+export const StyledRecipeList = styled(motion.div)`
   width: 100%;
   margin: 0 auto 16px auto;
   padding: 0;

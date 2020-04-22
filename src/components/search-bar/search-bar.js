@@ -15,6 +15,27 @@ import SuggestionsList from '../suggestions-list/suggestions-list'
 import topIngredients from '../../topIngredients.json'
 import { useDebounce } from '../../hooks/useDebounce'
 
+const searchVariant = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
 const SearchBar = () => {
   const {
     recipes,
@@ -73,7 +94,11 @@ const SearchBar = () => {
   }, [debouncedInputVal])
 
   return (
-    <StyledSearchBar>
+    <StyledSearchBar
+      initial="initial"
+      animate="animate"
+      variants={searchVariant}
+    >
       <SearchBarWrapper>
         <StyledForm>
           <StyledInput

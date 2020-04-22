@@ -39,6 +39,7 @@ export const ItemImage = styled(motion.div)`
   align-self: center;
   width: 300px;
   height: 400px;
+  background-color: ${({ theme }) => theme.colors.light};
   ${({ bgImg }) => (bgImg ? `background: url(${bgImg})` : '')};
   background-size: cover;
   background-position: center center;

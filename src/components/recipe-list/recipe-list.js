@@ -16,6 +16,27 @@ import { SkeletonList } from '../skeleton-list/skeleton-list'
 
 import { StyledRecipeList, Placeholder } from './recipe-list-styles'
 
+const recipeListvariants = {
+  initial: {
+    opacity: 0,
+    scale: 0.2,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
 const RecipeList = () => {
   const { recipes, loading } = useRecipes()
   const isMobile = useMediaQuery({ maxWidth: 500 })
@@ -23,7 +44,12 @@ const RecipeList = () => {
   return loading ? (
     <SkeletonList />
   ) : (
-    <StyledRecipeList>
+    <StyledRecipeList
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={recipeListvariants}
+    >
       {recipes.length ? (
         <CarouselProvider
           naturalSlideWidth={100}
