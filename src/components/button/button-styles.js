@@ -12,7 +12,7 @@ export const StyledButton = styled.button`
   display: inline-block;
   border-radius: ${({ theme }) => theme.borderRadius};
   padding: 15px 8px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   letter-spacing: 1.2px;
   color: ${({ theme }) => theme.colors.textMain};
@@ -23,5 +23,7 @@ export const StyledButton = styled.button`
   &:disabled {
     cursor: not-allowed;
     background: #bdbdbd;
+    font-weight: ${({ theme }) => theme.fontWeights.normal};
+    color: ${({ theme }) => theme.colors.textSub};
   }
 `
