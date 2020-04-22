@@ -6,7 +6,7 @@ const RecipeDispatchContext = createContext()
 
 const INITIAL_STATE = {
   recipes: [],
-  ingredients: ['cheese', 'bacon'],
+  ingredients: [],
   suggestions: [],
   currentRecipe: null,
   error: null,
@@ -25,7 +25,7 @@ const recipesReducer = (state, action) => {
       return {
         ...state,
         ingredients: state.ingredients.filter(
-          ingredient => ingredient.id !== action.payload.id
+          ingredient => ingredient !== action.payload
         ),
       }
     case recipesActionTypes.CLEAR_INGREDIENTS:
