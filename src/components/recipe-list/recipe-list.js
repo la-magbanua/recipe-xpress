@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
-import { useRecipes } from '../../contexts/recipes/recipes-context'
+import { useRecipesState } from '../../contexts/recipes/recipes-context'
 import {
   CarouselProvider,
   Slider,
@@ -38,7 +38,7 @@ const recipeListvariants = {
 }
 
 const RecipeList = () => {
-  const { recipes, loading } = useRecipes()
+  const { recipes, loading } = useRecipesState()
   const isMobile = useMediaQuery({ maxWidth: 500 })
 
   return loading ? (

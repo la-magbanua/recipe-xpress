@@ -1,11 +1,12 @@
 import React, { useContext, useReducer, createContext } from 'react'
 import { recipesActionTypes } from './recipes-types'
 
-const RecipeContext = createContext()
+const RecipeStateContext = createContext()
+const RecipeDispatchContext = createContext()
 
 const INITIAL_STATE = {
   recipes: [],
-  ingredients: [],
+  ingredients: ['cheese', 'bacon'],
   suggestions: [],
   currentRecipe: null,
   error: null,
@@ -20,6 +21,13 @@ const recipesReducer = (state, action) => {
       return { ...state, recipes: [] }
     case recipesActionTypes.ADD_INGREDIENT:
       return { ...state, ingredients: [...state.ingredients, action.payload] }
+    case recipesActionTypes.REMOVE_INGREDIENT:
+      return {
+        ...state,
+        ingredients: state.ingredients.filter(
+          ingredient => ingredient.id !== action.payload.id
+        ),
+      }
     case recipesActionTypes.CLEAR_INGREDIENTS:
       return { ...state, ingredients: [] }
     case recipesActionTypes.SET_ERROR:
@@ -51,6 +59,13 @@ const RecipeProvider = ({ children }) => {
       dispatch({ type: recipesActionTypes.ADD_INGREDIENT, payload: ingredient })
     },
 
+    removeIngredient(ingredient) {
+      dispatch({
+        type: recipesActionTypes.REMOVE_INGREDIENT,
+        payload: ingredient,
+      })
+    },
+
     clearIngredients() {
       dispatch({ type: recipesActionTypes.CLEAR_INGREDIENTS })
     },
@@ -73,17 +88,28 @@ const RecipeProvider = ({ children }) => {
   }
 
   return (
-    <RecipeContext.Provider
-      value={{
-        ...state,
-        ...actions,
-      }}
-    >
-      {children}
-    </RecipeContext.Provider>
+    <RecipeStateContext.Provider value={{ ...state }}>
+      <RecipeDispatchContext.Provider value={{ ...actions }}>
+        {children}
+      </RecipeDispatchContext.Provider>
+    </RecipeStateContext.Provider>
   )
 }
 
-const useRecipes = () => useContext(RecipeContext)
+const useRecipesState = () => {
+  const context = useContext(RecipeStateContext)
+  if (context === undefined) {
+    throw new Error('useRecipesState must be used inside RecipeProvider')
+  }
+  return context
+}
 
-export { RecipeProvider, useRecipes }
+const useRecipesDispatch = () => {
+  const context = useContext(RecipeDispatchContext)
+  if (context === undefined) {
+    throw new Error('useRecipesDispatch must be used inside RecipeProvider')
+  }
+  return context
+}
+
+export { RecipeProvider, useRecipesState, useRecipesDispatch }

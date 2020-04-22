@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { useRecipes } from '../../contexts/recipes/recipes-context'
+import {
+  useRecipesState,
+  useRecipesDispatch,
+} from '../../contexts/recipes/recipes-context'
 
 import IngredientList from '../ingredient-list/ingredient-list'
 import Button from '../button/button'
@@ -37,18 +40,15 @@ const searchVariant = {
 }
 
 const SearchBar = () => {
+  const { recipes, ingredients, loading, suggestions } = useRecipesState()
   const {
-    recipes,
-    ingredients,
     clearIngredients,
     setRecipes,
     clearRecipes,
     setError,
-    loading,
     setLoading,
-    suggestions,
     setSuggestions,
-  } = useRecipes()
+  } = useRecipesDispatch()
   const [inputVal, setInputVal] = useState('')
   const [suggestionListIsVisible, setSuggestionListIsVisible] = useState(false)
 

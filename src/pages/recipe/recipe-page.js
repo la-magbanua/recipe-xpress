@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { useRecipes } from '../../contexts/recipes/recipes-context'
+import {
+  useRecipesState,
+  useRecipesDispatch,
+} from '../../contexts/recipes/recipes-context'
+
 import { Skel } from '../../components/skeleton-list/skeleton-list'
 
 import {
@@ -99,7 +103,8 @@ const instructionsVariant = {
 }
 
 const RecipePage = ({ match }) => {
-  const { currentRecipe, setCurrentRecipe, setLoading } = useRecipes()
+  const { currentRecipe } = useRecipesState()
+  const { setCurrentRecipe, setLoading } = useRecipesDispatch()
   const isMobile = useMediaQuery({ maxWidth: 500 })
 
   const fetchRecipe = async () => {

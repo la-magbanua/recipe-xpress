@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
-import { useRecipes } from '../../contexts/recipes/recipes-context'
+import {
+  useRecipesState,
+  useRecipesDispatch,
+} from '../../contexts/recipes/recipes-context'
 
 import {
   StyledSuggestionsList,
@@ -8,7 +11,8 @@ import {
 } from './suggestions-list-styles'
 
 const SuggestionsList = ({ setInputVal, setSuggestionListIsVisible }) => {
-  const { suggestions, addIngredient, setSuggestions } = useRecipes()
+  const { suggestions } = useRecipesState()
+  const { addIngredient, setSuggestions } = useRecipesDispatch()
 
   useEffect(() => {
     document.addEventListener('click', handleDocumentClick)
