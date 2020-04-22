@@ -18,6 +18,62 @@ import {
   SkelDetails,
 } from './recipe-page-styles'
 
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const imageVariant = {
+  initial: {
+    opacity: 0,
+    x: -30,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+}
+
+const titleVariant = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+}
+
+const minutesVariant = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+}
+
+const instructionsVariant = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+}
+
 const RecipePage = ({ match }) => {
   const { currentRecipe, setCurrentRecipe, setLoading } = useRecipes()
   const isMobile = useMediaQuery({ maxWidth: 500 })
@@ -62,13 +118,15 @@ const RecipePage = ({ match }) => {
       </SkelDetails>
     </RecipeSkeleton>
   ) : (
-    <StyledRecipePage>
+    <StyledRecipePage initial="initial" animate="animate" variants={variants}>
       <RecipeHeader>
-        <ItemImage bgImg={currentRecipe.image} />
+        <ItemImage bgImg={currentRecipe.image} variants={imageVariant} />
         <ItemDetails>
-          <Title>{currentRecipe.title}</Title>
-          <Minutes>{currentRecipe.readyInMinutes} mins</Minutes>
-          <Instructions>
+          <Title variants={titleVariant}>{currentRecipe.title}</Title>
+          <Minutes variants={minutesVariant}>
+            {currentRecipe.readyInMinutes} mins
+          </Minutes>
+          <Instructions variants={instructionsVariant}>
             <InstructionsHeading>Instructions</InstructionsHeading>
             {currentRecipe.analyzedInstructions.length ? (
               currentRecipe.analyzedInstructions[0].steps.map(

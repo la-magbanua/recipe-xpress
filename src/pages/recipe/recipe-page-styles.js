@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const StyledRecipePage = styled.div``
+export const StyledRecipePage = styled(motion.div)``
 
 export const RecipeHeader = styled.div`
   padding: 1.5rem 1rem 10px 1rem;
@@ -22,19 +23,19 @@ export const ItemDetails = styled.div`
   }
 `
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: ${({ theme }) => theme.colors.textMain};
 `
 
-export const Minutes = styled.p`
+export const Minutes = styled(motion.p)`
   font-size: 15px;
   margin-top: 5px;
   color: ${({ theme }) => theme.colors.textSub};
 `
 
-export const ItemImage = styled.div`
+export const ItemImage = styled(motion.div)`
   align-self: center;
   width: 300px;
   height: 400px;
@@ -48,7 +49,7 @@ export const ItemImage = styled.div`
   }
 `
 
-export const Instructions = styled.div`
+export const Instructions = styled(motion.div)`
   min-height: 100%;
   padding: 0;
 
