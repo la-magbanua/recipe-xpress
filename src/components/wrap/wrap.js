@@ -7,7 +7,6 @@ const StyledWrap = styled.div`
 
   @media screen and (max-width: 500px) {
     max-width: 100%;
-    /* padding: ${({ noPad }) => (noPad ? '0' : '0 1.15rem')}; */
     padding: 0;
   }
 `
