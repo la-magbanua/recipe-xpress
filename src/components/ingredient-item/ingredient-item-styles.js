@@ -7,6 +7,7 @@ export const StyledIngredientItem = styled(motion.span)`
   align-items: center;
   padding: 3px 8px;
   margin-right: 3px;
+  margin-top: 5px;
   border-radius: 9px;
   background: ${({ theme }) => theme.colors.light};
   color: ${({ theme }) => theme.colors.textSub};
