@@ -8,6 +8,7 @@ export const StyledRecipeList = styled(motion.div)`
 
   @media screen and (max-width: 500px) {
     width: 100%;
+    padding: 0 1.15rem;
   }
 
   .carousel {

@@ -5,13 +5,17 @@ const BlockButton = css`
   width: 100%;
 `
 
+const TransparentButton = css`
+  background: transparent;
+`
+
 export const StyledButton = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
   display: inline-block;
   border-radius: ${({ theme }) => theme.borderRadius};
-  padding: 15px 8px;
+  padding: 10px 8px;
   font-size: 15px;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   letter-spacing: 1.2px;
@@ -19,6 +23,7 @@ export const StyledButton = styled.button`
   background: ${({ theme }) => theme.colors.yellow};
 
   ${({ block }) => (block ? BlockButton : '')};
+  ${({ transparent }) => (transparent ? TransparentButton : '')};
 
   &:disabled {
     cursor: not-allowed;

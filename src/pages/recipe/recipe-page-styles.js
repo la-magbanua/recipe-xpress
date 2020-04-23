@@ -47,6 +47,7 @@ export const ItemImage = styled(motion.div)`
 
   @media screen and (max-width: 500px) {
     height: 200px;
+    width: 100%;
   }
 `
 
