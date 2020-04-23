@@ -105,6 +105,14 @@ export const Instruction = styled.div`
   @media screen and (max-width: 500px) {
     margin: 16px 0;
 
+    div:first-child {
+      margin-right: 15px;
+    }
+
+    h3 {
+      font-size: 13px;
+    }
+
     p {
       line-height: 22px;
     }
