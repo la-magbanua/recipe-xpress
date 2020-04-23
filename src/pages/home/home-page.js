@@ -3,6 +3,7 @@ import SearchBar from '../../components/search-bar/search-bar'
 import RecipeList from '../../components/recipe-list/recipe-list'
 
 import { StyledHomePage } from './home-page-styles'
+import { ClearSection } from '../../components/clear-section/clear-section'
 
 const variants = {
   initial: {
@@ -10,6 +11,9 @@ const variants = {
   },
   animate: {
     opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
   },
   exit: {
     opacity: 0,
@@ -30,6 +34,7 @@ const HomePage = () => {
     >
       <SearchBar />
       <RecipeList />
+      <ClearSection />
     </StyledHomePage>
   )
 }

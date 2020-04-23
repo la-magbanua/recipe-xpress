@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const StyledRecipeItem = styled.div`
+export const StyledRecipeItem = styled(motion.div)`
   height: 100%;
   margin: 5px 10px;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.borderRadiusX};
   box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
 
   a {
@@ -27,7 +28,7 @@ export const ItemImage = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: ${({ theme }) =>
-    `${theme.borderRadius} ${theme.borderRadius} 0 0`};
+    `${theme.borderRadiusX} ${theme.borderRadiusX} 0 0`};
 `
 
 export const ItemDetails = styled.div`

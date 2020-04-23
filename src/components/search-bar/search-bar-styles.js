@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const StyledSearchBar = styled(motion.div)`
-  background: ${({ theme }) => theme.colors.offWhite};
   padding: 1rem 1.5rem;
 
   @media screen and (max-width: 500px) {
@@ -34,6 +33,6 @@ export const StyledInput = styled.input`
   font-size: 15px;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   color: ${({ theme }) => theme.colors.textSub};
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.borderRadiusX};
   box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
 `

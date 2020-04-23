@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const StyledIngredientItem = styled.span`
+export const StyledIngredientItem = styled(motion.span)`
   display: inline-flex;
   justify-content: space-between;
   align-items: center;

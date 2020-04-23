@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import {
   useRecipesState,
   useRecipesDispatch,
@@ -40,11 +41,9 @@ const searchVariant = {
 }
 
 const SearchBar = () => {
-  const { recipes, ingredients, loading, suggestions } = useRecipesState()
+  const { ingredients, loading, suggestions } = useRecipesState()
   const {
-    clearIngredients,
     setRecipes,
-    clearRecipes,
     setError,
     setLoading,
     setSuggestions,
@@ -67,11 +66,6 @@ const SearchBar = () => {
       }
       setRecipes(data)
     }
-  }
-
-  function handleClearRecipes() {
-    clearIngredients()
-    clearRecipes()
   }
 
   async function handleInputChange(e) {
@@ -120,13 +114,13 @@ const SearchBar = () => {
 
         <IngredientList />
 
-        <Button
-          onClick={!recipes.length ? fetchRecipes : handleClearRecipes}
-          disabled={ingredients.length < 2 || loading}
-          block
-        >
-          {!recipes.length ? 'Get Recipes' : 'Clear Recipes'}
-        </Button>
+        <AnimatePresence>
+          {ingredients.length < 2 ? null : (
+            <Button onClick={fetchRecipes} disabled={loading} block>
+              Get Recipes
+            </Button>
+          )}
+        </AnimatePresence>
       </SearchBarWrapper>
     </StyledSearchBar>
   )

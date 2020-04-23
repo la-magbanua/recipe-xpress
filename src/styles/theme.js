@@ -16,5 +16,6 @@ export const theme = {
     xBold: 800,
   },
   fontFace: `Poppins, sans-serif`,
-  borderRadius: '9px',
+  borderRadius: '45px',
+  borderRadiusX: '6px',
 }

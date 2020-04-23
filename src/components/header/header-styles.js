@@ -9,7 +9,7 @@ export const InnerHeader = styled.div`
   grid-template-columns: 35px 1fr 35px;
   justify-items: center;
   align-items: center;
-  background: ${({ theme }) => theme.colors.offWhite};
+  /* background: ${({ theme }) => theme.colors.offWhite}; */
 
   @media screen and (max-width: 500px) {
     grid-template-columns: 35px 1fr 35px;

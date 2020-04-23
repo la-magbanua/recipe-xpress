@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { motion } from 'framer-motion'
 
 const BlockButton = css`
   display: block;
@@ -9,18 +10,20 @@ const TransparentButton = css`
   background: transparent;
 `
 
-export const StyledButton = styled.button`
+export const StyledButton = styled(motion.button)`
   outline: none;
   border: none;
   cursor: pointer;
   display: inline-block;
   border-radius: ${({ theme }) => theme.borderRadius};
-  padding: 10px 8px;
-  font-size: 15px;
+  padding: 20px 8px;
+  font-size: 14px;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-  letter-spacing: 1.2px;
-  color: ${({ theme }) => theme.colors.textMain};
-  background: ${({ theme }) => theme.colors.yellow};
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.colors.offWhite};
+  background: ${({ theme }) => theme.colors.textMain};
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
   ${({ block }) => (block ? BlockButton : '')};
   ${({ transparent }) => (transparent ? TransparentButton : '')};
